@@ -1,13 +1,10 @@
 body {
-  margin: auto;
-  padding: 0;
-  font-family: "Merienda One";
-  background: white;
+  font-family: 'Ubuntu', courier;
   text-align: center;
-  color: black;
-  padding: 200px 0;
-  margin-left: 100px;
-  margin-right: 100px;
+  color: white;
+
+  background-image: url('../../images/SF.jpg');
+  background-position: center;
 }
 
 header {
@@ -15,7 +12,7 @@ header {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .avatar {
@@ -23,13 +20,21 @@ h1 {
   height: 100px;
 }
 
+.container {
+  height: 50%;
+  width: 50%;
+  padding: 30px;
+  margin: 20% auto;
+  background-color:rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.3), 0 20px 50px rgba(0,0,0,0.3);
+}
 
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  color: black;
+  color: white;
   text-align: center;
   font-size: 15px;
 }
@@ -40,18 +45,18 @@ footer {
 }
 
 .UCM-Logo {
-  height: 45px;
-  width: 25px;
+  height: 15px;
+  width: 10px;
   position: relative;
-  top: 10px;
+  /* top: 10px; */
 }
 
 p {
-  font-size: 24px;
+  font-size: 24em;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
