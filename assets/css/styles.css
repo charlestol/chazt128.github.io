@@ -69,8 +69,10 @@ h1 {
   padding-top: 2%;
   padding-bottom: 5%;
 
-  margin: 10% auto;
+  margin: 10% auto 0 auto;
   background-color:rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
   box-shadow: 0 20px 30px rgba(0,0,0,0.3), 0 20px 50px rgba(0,0,0,0.3);
 }
 
@@ -101,16 +103,16 @@ a {
   text-align: center;
 }
 
+.links {
+}
+
 .links ul {
   display: inline-block;
   text-align: center;
 }
 
 footer {
-  /* position: relative; */
   bottom: 0;
   width: 100%;
   padding: 0px;
-
-
 }
