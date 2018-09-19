@@ -1,5 +1,6 @@
-html {
-    height: 100%;
+html, body {
+    margin:0;
+    padding:0;
 }
 
 body {
@@ -9,10 +10,6 @@ body {
 
   background-image: url('../../images/SF.jpg');
   background-position: center;
-}
-
-header {
-  /* margin: 0 auto; */
 }
 
 h1 {
@@ -76,45 +73,6 @@ h1 {
   background-color:rgba(0, 0, 0, 0.2);
   box-shadow: 0 20px 30px rgba(0,0,0,0.3), 0 20px 50px rgba(0,0,0,0.3);
 }
-/*
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-} */
-/* .footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
-} */
-/*
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-size: 15px;
-} */
-/*
-.UCM-Logo:hover {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.UCM-Logo {
-  height: 15px;
-  width: 10px;
-  position: relative;
-  top: 10px;
-} */
-
-.info {
-  /* height: 20px; */
-  /* position: fixed; */
-  /* width: 620px; */
-
-}
 
 #intro {
   font-size: 20px;
@@ -126,24 +84,32 @@ a {
   text-decoration: none;
 }
 
-p {
+.icons {
+  height: 40px;
+  margin: 10px;
 }
 
-.fadeIn {
-  opacity: 0;
-  animation: fadeIn 2s forwards;
+.iconLinks li a img {
+  vertical-align: middle;
+  padding: 5px 5px 5px 5px;
+  height: 50px;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.centerIcons {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.links ul {
+  display: inline-block;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 0px;
+
 }
