@@ -1,3 +1,15 @@
+html {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html, body {
     margin:0;
     padding:0;
@@ -7,9 +19,30 @@ body {
   font-family: 'Ubuntu', courier;
   text-align: center;
   color: white;
+  position: relative;
+  margin: 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-height: 100%;
 
   background-image: url('../../images/SF.jpg');
   background-position: center;
+}
+
+.bg-image {
+  background-image: url('../../images/SF.jpg');
+  background-position: center;
+  /* Add the blur effect */
+ /* filter: blur(20px);
+ -webkit-filter: blur(8px);
+
+ /* Full height */
+ /* height: 100%; */
+
+ /* Center and scale the image nicely */
+ /* background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover; */ 
 }
 
 h1 {
@@ -20,6 +53,7 @@ h1 {
 @media screen and (min-width: 1101px) {
   .wrapper {
     width: 50%;
+    padding-bottom: 5%;
   }
 
   .avatar {
@@ -45,14 +79,22 @@ h1 {
   }
 
   #intro {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 0 15% 10% 15%;
   }
 }
 
 @media screen and (max-width: 700px) {
   .wrapper {
-    width: 85%;
+    width: 90%;
+  }
+
+  .avatar {
+    float: top;
+  }
+
+  #intro {
+    margin: 0 15% 10% 15%;
+    padding-bottom: 5%;
   }
 }
 
@@ -64,17 +106,22 @@ h1 {
 }
 
 .wrapper {
-  height: 100%;
-
   padding-top: 2%;
-  padding-bottom: 5%;
-
-  margin: 10% auto 0 auto;
-  background-color:rgba(0, 0, 0, 0.2);
-
-  overflow: hidden;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
   box-shadow: 0 20px 30px rgba(0,0,0,0.3), 0 20px 50px rgba(0,0,0,0.3);
+
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
 }
+
+.wrapper:after {
+  display: block;
+  content: '';
+  height: 10px;
+}
+
 
 #intro {
   font-size: 20px;
@@ -114,7 +161,10 @@ a {
 }
 
 footer {
+  height: 120px;
+  position: absolute;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  padding: 0px;
+  left: 0;
+  text-align: center;
 }
