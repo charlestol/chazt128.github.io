@@ -25,24 +25,8 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
 
-  background-image: url('../../images/SF.jpg');
+  background-image: url('../../images/bg-img.jpg');
   background-position: center;
-}
-
-.bg-image {
-  background-image: url('../../images/SF.jpg');
-  background-position: center;
-  /* Add the blur effect */
- /* filter: blur(20px);
- -webkit-filter: blur(8px);
-
- /* Full height */
- /* height: 100%; */
-
- /* Center and scale the image nicely */
- /* background-position: center;
- background-repeat: no-repeat;
- background-size: cover; */ 
 }
 
 h1 {
