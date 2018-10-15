@@ -27,7 +27,8 @@ body {
 .wrapper {
   text-align: center;
   position: absolute;
-  margin: auto;
+  margin: 5px;
+  padding: 5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);}
@@ -46,7 +47,7 @@ a {
 
 .icons {
   height: 40px;
-  margin: 15px;
+  margin: 10px 15px;
   border-radius: 50%;
 }
 
