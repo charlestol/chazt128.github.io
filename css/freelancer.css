@@ -71,6 +71,18 @@ hr.star-dark:after {
   width: 800px;
 }
 
+@media (max-width: 850px) {
+  .about {
+    width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .about {
+    width: 300px;
+  }
+}
+
 section {
   padding: 6rem 0;
 }
