@@ -16,13 +16,13 @@
     <div class="container pt-4">	
       <ul class="nav nav-pills d-flex justify-content-center">
         <li class="active">
-          <a href="#about" class="mx-2 text-danger about" data-toggle="tab">About</a>
+          <a href="#about" class="mx-2 text-danger about" data-toggle="tab" id="about-tab">About</a>
         </li>
         <li>
-          <a href="#portfolio" class="mx-2 text-danger portfolio" data-toggle="tab">Portfolio</a>
+          <a href="#portfolio" class="mx-2 text-danger portfolio" data-toggle="tab" id="portfolio-tab">Portfolio</a>
         </li>
         <li>
-          <a href="Resume.pdf" target="_blank" class="mx-2 text-danger">Resume</a>
+          <a href="Resume.pdf" target="_blank" class="mx-2 text-danger" id="resume-tab">Resume</a>
         </li>
       </ul>
 
@@ -55,10 +55,10 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script>
-    $(function(){
-      var hash = window.location.hash;
+    $(() => {
+      let hash = window.location.hash;
       hash && $('ul.nav.nav-pills a[href="' + hash + '"]').tab('show'); 
-      $('ul.nav.nav-pills a').click(function (e) {
+      $('ul.nav.nav-pills a').click(function(e) {
         $(this).tab('show');
         // var scrollmem = $('body').scrollTop();
         window.location.hash = this.hash;
