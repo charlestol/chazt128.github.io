@@ -27,7 +27,7 @@
   </head>
   <body class="bg-dark text-light" style="font-family: 'Francois One', sans-serif; letter-spacing: 2px;">
     <div class="container d-flex justify-content-center">	
-      <ul class="nav nav-pills position-fixed w-100 py-3 bg-dark d-flex justify-content-center " style="z-index: 10;">
+      <ul class="nav nav-pills position-fixed w-100 py-3 bg-dark d-flex justify-content-center" style="z-index: 10;">
         <li class="active">
           <a href="#about" class="mx-2 text-danger about" data-toggle="tab" id="about-tab">About</a>
         </li>
@@ -94,7 +94,12 @@
             <div class="modal fade" id="SeekItModal" tabindex="-1" role="dialog" aria-labelledby="SeekItModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-secondary">
-                  <img src="assets/SeekIt.png" alt="SeekIt" class="modal-header w-100" />   
+                  <div class="modal-header">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                      <span aria-hidden="true">x</span>
+                    </button>
+                    <img src="assets/SeekIt.png" alt="SeekIt" class="w-100" />
+                  </div>   
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="SeekItModalCenterTitle">SeekIt</h4>
                     <p>Team Size: 4</p>
@@ -110,8 +115,13 @@
             </div>
             <div class="modal fade" id="LilBillModal" tabindex="-1" role="dialog" aria-labelledby="LilBillModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content bg-secondary">                       
-                  <img src="assets/LilBill.png" alt="LilBill" class="modal-header w-100" />    
+                <div class="modal-content bg-secondary">
+                  <div class="modal-header">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                      <span aria-hidden="true">x</span>
+                    </button>                       
+                    <img src="assets/LilBill.png" alt="LilBill" class="w-100" />    
+                  </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="LilBillModalCenterTitle">LilBill</h4>
                     <p>Team Size: 3</p>
@@ -128,7 +138,12 @@
             <div class="modal fade" id="HackMercedModal" tabindex="-1" role="dialog" aria-labelledby="HackMercedModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-secondary">
-                  <img src="assets/HackMerced.png" alt="SeekIt" class="modal-header w-100" />  
+                  <div class="modal-header">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                      <span aria-hidden="true">x</span>
+                    </button>  
+                    <img src="assets/HackMerced.png" alt="SeekIt" class="w-100" />  
+                  </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="HackMercedModalCenterTitle">HackMerced IV</h4>
                     <p>Team Size: 2</p>
@@ -145,7 +160,12 @@
             <div class="modal fade" id="MyoHMIModal" tabindex="-1" role="dialog" aria-labelledby="MyoHMIModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-secondary">
-                  <img src="assets/MyoHMI.png" alt="SeekIt" class="modal-header w-100" />
+                  <div class="modal-header">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                      <span aria-hidden="true">x</span>
+                    </button>  
+                    <img src="assets/MyoHMI.png" alt="SeekIt" class="w-100" />
+                  </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="MyoHMIModalCenterTitle">Myo-HMI (Human Machine Interface)</h4>
                     <p>Team Size: 6</p>
