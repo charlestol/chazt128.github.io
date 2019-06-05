@@ -13,8 +13,8 @@
 
   </head>
   <body class="bg-dark text-light" style="font-family: 'Francois One', sans-serif; letter-spacing: 2px;">
-    <div class="container pt-4">	
-      <ul class="nav nav-pills d-flex justify-content-center">
+    <div class="container d-flex justify-content-center">	
+      <ul class="nav nav-pills position-fixed w-100 py-4 bg-dark d-flex justify-content-center " style="z-index: 10;">
         <li class="active">
           <a href="#about" class="mx-2 text-danger about" data-toggle="tab" id="about-tab">About</a>
         </li>
@@ -27,12 +27,12 @@
       </ul>
 
       <div class="tab-content d-flex justify-content-center">
-        <div class="tab-pane active text-center" id="about">
+        <div class="tab-pane active text-center pt-5" id="about">
           <h1 class="my-4">Hey, I'm Charles</h1>
           <img class="my-2 rounded-circle" style="width: 300px;" src="assets/avatar.jpg" alt="Me" title="My amazing girlfriend took this amazing pic :)" />
           <p class="my-4 px-5 mw-75 text-left" style="max-width: 550px">I'm a recent graduate with a bachelor's degree in Computer Science and Engineering from UC Merced.<br /><br />My technical focus is application development (web and mobile) and I'm passionate in building applications towards areas such as social impact, education, and health.<br /><br />During my leisure, I enjoy B-boying (breakdancing), video games, card games, reading from Medium or Quora, and eating great food.</p> 
         </div>
-        <div class="tab-pane" id="portfolio">
+        <div class="tab-pane pt-5" id="portfolio">
           <div class="my-4">
             <h1 class="text-center">Projects</h1>
             <div class="card-deck my-4 d-flex justify-content-center">
@@ -84,7 +84,7 @@
       <li class="list-group-item bg-dark" style="border: none;"><a href="https://www.facebook.com/ChazTol" target="_blank" class="fab fa-facebook-square fa-2x text-light"></a></li>
       <li class="list-group-item bg-dark" style="border: none;"><a href="mailto:ctolen1994@gmail.com" target="_blank" class="fas fa-envelope fa-2x text-light"></a></li>
     </ul>
-    <div class="d-flex justify-content-center">&copy; Charles Tolentino</div>
+    <div class="d-flex justify-content-center mb-4">&copy; Charles Tolentino</div>
 <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -94,7 +94,7 @@
       hash && $('ul.nav.nav-pills a[href="' + hash + '"]').tab('show'); 
       $('ul.nav.nav-pills a').click(function(e) {
         $(this).tab('show');
-        // var scrollmem = $('body').scrollTop();
+        var scrollmem = $('body').scrollTop(0);
         window.location.hash = this.hash;
       });
     });
