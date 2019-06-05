@@ -5,6 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <style>
+      .card{
+        -webkit-transition: transform 0.2s; /* Safari */
+        -moz-transition: transform 0.2s;
+        -o-transition: transform 0.2s;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+    </style>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Roboto&display=swap" rel="stylesheet">
@@ -36,44 +49,121 @@
           <div class="mt-2 mb-4">
             <h1 class="text-center">Projects</h1>
             <div class="card-deck my-4 d-flex justify-content-center">
+              
               <div style="width: 280px">
-                <div class="card bg-secondary mb-4" style="border: none;">
+                <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#SeekItModal">
                   <img src="assets/SeekitPrev.png" class="card-img-top" alt="SeekIt" style="height:150px;">
                   <div class="card-body">
                     <h5 class="card-title">SeekIt</h5>
                     <p class="card-text"><small>A scavenger hunt app that allows teachers to have students participate in interactive events as an assignment for credit.</small></p>
                   </div>
-                </div>
+                </a>
               </div>
+              
               <div style="width: 280px">
-                <div class="card bg-secondary mb-4" style="border: none;">
+                <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#LilBillModal">
                   <img src="assets/LilBillPrev.png" class="card-img-top" alt="LilBill" style="height:150px;">
                   <div class="card-body">
                     <h5 class="card-title">LilBill</h5>
                     <p class="card-text"><small>A dollar bill classifying app that identifies the value of a USD bill with audio (speech) or tactile (vibrations) feedback.</small></p>
                   </div>
-                </div>
+                </a>
               </div>
               <div style="width: 280px">
-                <div class="card bg-secondary mb-4" style="border: none;">
+                <a class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#HackMercedModal">
                   <img src="assets/HackMerced.png" class="card-img-top" alt="HackMerced" style="height:150px;">
                   <div class="card-body">
                     <h5 class="card-title">HackMerced IV</h5>
                     <p class="card-text"><small>The main hackathon site, live (countdown) site, and preregistration page, built for the HackMerced IV hackathon.</small></p>
                   </div>
-                </div>
+                </a>
               </div>
               <div style="width: 280px">
-                <div class="card bg-secondary mb-4" style="border: none;">
+                <a class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#MyoHMIModal">
                   <img src="assets/MyoHMIPrev.png" class="card-img-top" alt="Myo-HMI" style="height:150px;">
                   <div class="card-body">
                     <h5 class="card-title">Myo-HMI</h5>
                     <p class="card-text"><small>An android app which connects to a Myo-Armband via bluetooth and allows users to train the app to recognize hand gestures.</small></p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <!-- <div>I'll be adding more projects on here soon! :)</div> -->
+            
+            <!-- Modals -->
+            <div class="modal fade" id="SeekItModal" tabindex="-1" role="dialog" aria-labelledby="SeekItModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-secondary">
+                  
+                    
+                  <img src="assets/SeekIt.png" alt="SeekIt" class="modal-header w-100" />
+                    
+                  <div class="modal-body">
+                    <h5 class="modal-title" id="SeekItModalCenterTitle">SeekIt</h5>
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="LilBillModal" tabindex="-1" role="dialog" aria-labelledby="LilBillModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content bg-secondary">
+                    
+                      
+                    <img src="assets/LilBill.png" alt="LilBill" class="modal-header w-100" />
+                      
+                    <div class="modal-body">
+                      <h5 class="modal-title" id="LilBillModalCenterTitle">LilBill</h5>
+                    </div>
+                    
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="HackMercedModal" tabindex="-1" role="dialog" aria-labelledby="HackMercedModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content bg-secondary">
+                      
+                        
+                      <img src="assets/HackMerced.png" alt="SeekIt" class="modal-header w-100" />
+                        
+                      <div class="modal-body">
+                        <h5 class="modal-title" id="HackMercedModalCenterTitle">HackMerced IV</h5>
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="MyoHMIModal" tabindex="-1" role="dialog" aria-labelledby="MyoHMIModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content bg-secondary">
+                        
+                          
+                        <img src="assets/MyoHMI.png" alt="SeekIt" class="modal-header w-100" />
+                          
+                        <div class="modal-body">
+                          <h5 class="modal-title" id="MyoHMIModalCenterTitle">Myo-HMI (Human Machine Interface)</h5>
+                        </div>
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
           </div>
         </div>
       </div>
