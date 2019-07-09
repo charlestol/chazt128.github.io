@@ -10,6 +10,7 @@
     <title>Charles Tolentino</title>
     <style>
       .card{
+        height: 92%;
         -webkit-transition: transform 0.2s; /* Safari */
         -moz-transition: transform 0.2s;
         -o-transition: transform 0.2s;
@@ -40,7 +41,7 @@
           <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="mx-2 text-white" id="resume-tab">Resume</a>
         </li>
       </ul>
-
+      <!-- Tab Content -->
       <div class="tab-content d-flex justify-content-center">
         <div class="tab-pane active text-center pt-5" id="about">
           <h1 class="mt-2 mb-4">Hey, I'm Charles</h1>
@@ -50,47 +51,54 @@
         <div class="tab-pane pt-5" id="portfolio">
           <div class="mt-2 mb-4">
             <h1 class="text-center">Projects</h1>
-            <p class="text-center mx-auto my-4 mw-75" style="max-width: 450px">I love working on projects to strengthen my technical skills and explore new technologies.<br /><br />Tap a card to see more info about it!</p>
+            <p class="text-center mx-auto my-4 w-75" style="max-width: 450px">I love working on projects to strengthen my technical skills and explore new technologies.<br /><br />Tap a card to see more info about it!</p>
             <div class="card-deck my-4">             
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto mb-4" style="width: 280px;">
                 <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#SeekItModal">
-                  <img src="assets/SeekitPrev.png" class="card-img-top" alt="SeekIt" style="height:150px;">
+                  <img src="assets/SeekitPrev.png" class="card-img-top" alt="SeekIt" style="height: 150px;">
                   <div class="card-body">
                     <h5 class="card-title">SeekIt</h5>
                     <p class="card-text"><small>A scavenger hunt app that allows teachers to have students participate in interactive events as an assignment for credit.</small></p>
                   </div>
                 </a>
-              </div>         
-              <div class="mx-auto" style="width: 280px">
+              </div>      
+              <div class="mx-auto mb-4" style="width: 280px">
                 <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#LilBillModal">
-                  <img src="assets/LilBillPrev.png" class="card-img-top" alt="LilBill" style="height:150px;">
+                  <img src="assets/LilBillPrev.png" class="card-img-top" alt="LilBill" style="height: 150px;">
                   <div class="card-body">
                     <h5 class="card-title">LilBill</h5>
-                    <p class="card-text"><small>A dollar bill classifying app that identifies the value of a USD bill with audio (speech) or tactile (vibrations) feedback.</small></p>
+                    <p class="card-text"><small>A dollar bill classifying app that can identify the value of a USD bill with audio (speech) or tactile (vibrations) feedback.</small></p>
                   </div>
                 </a>
               </div>
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto mb-4" style="width: 280px;">
+                <a href="#" class="card bg-secondary mb-4 text-light " style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#FalconBotModal">
+                  <img src="assets/FalconBotPrev.png" class="card-img-top" alt="FalconBot" style="height: 150px;">
+                  <div class="card-body">
+                    <h5 class="card-title">Falcon Tweeter</h5>
+                    <p class="card-text"><small>A Twitter bot that tweets a Captain Falcon move every 6 hours.</small></p>
+                  </div>
+                </a>
+              </div>   
+              <div class="mx-auto mb-4" style="width: 280px">
                 <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#HackMercedModal">
-                  <img src="assets/HackMerced.png" class="card-img-top" alt="HackMerced" style="height:150px;">
+                  <img src="assets/HackMerced.png" class="card-img-top" alt="HackMerced" style="height: 150px;">
                   <div class="card-body">
                     <h5 class="card-title">HackMerced IV</h5>
                     <p class="card-text"><small>The main hackathon site, live (countdown) site, and preregistration page, built for the HackMerced IV hackathon.</small></p>
                   </div>
                 </a>
               </div>
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto mb-4" style="width: 280px">
                 <a href="#" class="card bg-secondary mb-4 text-light" style="border: none; outline: none; text-decoration: none;" data-toggle="modal" data-target="#MyoHMIModal">
-                  <img src="assets/MyoHMIPrev.png" class="card-img-top" alt="Myo-HMI" style="height:150px;">
+                  <img src="assets/MyoHMIPrev.png" class="card-img-top" alt="Myo-HMI" style="height: 150px;">
                   <div class="card-body">
                     <h5 class="card-title">Myo-HMI</h5>
                     <p class="card-text"><small>An android app which connects to a Myo-Armband via bluetooth and allows users to train the app to recognize hand gestures.</small></p>
                   </div>
                 </a>
               </div>
-            </div>
-            <!-- <div>I'll be adding more projects on here soon! :)</div> -->
-            
+            </div>           
             <!-- Modals -->
             <div class="modal fade" id="SeekItModal" tabindex="-1" role="dialog" aria-labelledby="SeekItModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -109,7 +117,6 @@
                   </div>         
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                   </div>
                 </div>
               </div>
@@ -131,7 +138,26 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="FalconBotModal" tabindex="-1" role="dialog" aria-labelledby="FalconBotModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-secondary">
+                  <div class="modal-header">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                      <span aria-hidden="true">x</span>
+                    </button>                       
+                    <img src="assets/FalconBot.png" alt="FalconBot" class="w-100" />    
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="modal-title mb-2" id="FalconBotModalCenterTitle">Falcon Tweeter</h4>
+                    <p><small>Tech Utilized: NodeJS, Heroku</small></p>
+                    <p><small>Description: Coming Soon!</small></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -153,7 +179,6 @@
                   </div>  
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                   </div>
                 </div>
               </div>
@@ -175,7 +200,6 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                   </div>
                 </div>
               </div>
@@ -184,6 +208,7 @@
         </div>
       </div>
     </div>
+    <!-- Contact/Footer -->
     <ul class="list-group list-group-horizontal d-flex justify-content-center my-4">
       <li class="list-group-item bg-dark" style="border: none;"><a href="https://github.com/chazt128" target="_blank" rel="noopener noreferrer" class="fab fa-github fa-2x text-light" style="text-decoration: none !important;"></a></li>
       <li class="list-group-item bg-dark" style="border: none;"><a href="https://www.linkedin.com/in/charlestol/" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin fa-2x text-light" style="text-decoration: none !important;"></a></li>
