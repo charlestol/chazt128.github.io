@@ -29,8 +29,20 @@
       a {
         text-decoration: none !important;
       }
+      .nav-pills > li > a {
+        background: rgb(37, 36, 36) !important;
+        border: 1px solid white;
+      }
+      .nav-pills > li.active > a,
+      .nav-pills > li > a:hover {
+        background: gray !important;
+        border: 1px solid white;
+      }
+      .nav a, p {
+        font-size: 16px;
+      }
       .card{
-        height: 92%;
+        height: 98%;
         -webkit-transition: transform 0.2s; /* Safari */
         -moz-transition: transform 0.2s;
         -o-transition: transform 0.2s;
@@ -78,102 +90,105 @@
         }
       });
     </script>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </head>
   <body class="text-light">
     <div class="container">	
-      <ul class="nav nav-pills position-fixed py-3 d-flex justify-content-center" style="z-index: 10; right: 0; left: 0;">
+      <ul class="nav nav-pills position-fixed py-4 d-flex justify-content-center" style="z-index: 10; right: 0; left: 0;">
         <li class="active">
-          <a href="#about" class="mx-2 text-white about btn btn-dark" data-toggle="tab" id="about-tab">About</a>
+          <a href="#about" class="mx-2 text-white about">About</a>
         </li>
         <li>
-          <a href="#portfolio" class="mx-2 text-white portfolio btn btn-dark" data-toggle="tab" id="portfolio-tab">Portfolio</a>
+          <a href="#portfolio" class="mx-2 text-white portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="mx-2 text-white btn btn-dark" id="resume-tab">Resume</a>
+          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="mx-2 text-white">Resume</a>
         </li>
       </ul>
       <!-- Tab Content -->
       <div class="tab-content d-flex justify-content-center">
-        <div class="tab-pane active text-center pt-5" id="about">
-          <h1 class="mt-4 mb-4">Hey, I'm Charles</h1>
-          <img class="my-2 rounded-circle" style="width: 300px; border: white solid 4px;" src="assets/avatar.jpg" alt="Me" title="My amazing girlfriend took this great pic :)" />
+        <div class="tab-pane pt-5 text-center active" id="about">
+          <h1 class="pt-5 mb-4">Hey, I'm Charles</h1>
+          <img class="my-4 rounded-circle" style="width: 300px; border: white solid 4px;" src="assets/avatar.jpg" alt="Me" title="My amazing girlfriend took this great pic :)" />
           <p class="my-4 px-5 mw-75 text-left" style="max-width: 550px">I'm a recent grad from UC Merced with a BS degree in Computer Science and my technical focus is frontend web development.<br><br>I'm a passionate learner through means such as working on projects to explore technologies or by reading posts/articles on platforms such as Medium or Quora.<br /><br />During my leisure, I enjoy B-boying (breakdancing), video games, and card games.</p> 
         </div>
         <div class="tab-pane pt-5" id="portfolio">
           <div class="mt-4 mb-4">
-            <h1 class="text-center">Projects</h1>
-            <p class="text-center mx-auto my-4 w-75" style="max-width: 450px">I love working on projects to strengthen my technical skills and explore new technologies.<br /><br />Tap a card to see more info about it!</p>
+            <h1 class="text-center pt-5">Projects</h1>
+            <p class="text-center mx-auto my-4 w-75" style="max-width: 450px">I love working on projects, collaborating with others, and exploring new technologies.<br /><br />Tap a card to see more info about it!</p>
             <div class="card-deck my-4">             
-              <div class="mx-auto" style="width: 280px;">
+              <div class="mx-auto my-4" style="width: 280px;">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#SeekItModal">
                   <img src="assets/SeekitPrev.png" class="card-img-top" alt="SeekIt" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">SeekIt</h5>
-                    <p class="card-text"><small>This app enables instructors to engage students in event-based tasks for credit. Built for college-based users.</small></p>
+                    <h4 class="card-title">SeekIt</h4>
+                    <p class="card-text">An education-enhancing app enables instructors to engage students in scheduled events for credit.</small></p>
                   </div>
                 </a>
               </div>      
-              <div class="mx-auto" style="width: 280px;">
+              <div class="mx-auto my-4" style="width: 280px;">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#JournalingModal">
                   <img src="assets/JournalingPrev.png" class="card-img-top" alt="JournalingPrev" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">Journaling</h5>
-                    <p class="card-text"><small>A simple web app for writing journal entries and viewing your collection of journal entries.</small></p>
+                    <h4 class="card-title">Journaling</h4>
+                    <p class="card-text">A simple web app for writing journal entries and viewing your collection of journal entries.</small></p>
                   </div>
                 </a>
               </div>      
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto my-4" style="width: 280px">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#LilBillModal">
                   <img src="assets/LilBillPrev.png" class="card-img-top" alt="LilBill" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">LilBill</h5>
-                    <p class="card-text"><small>A dollar bill classifying app that identifies the USD value of a dollar bill if a bill is identified via camera.</small></p>
+                    <h4 class="card-title">LilBill</h4>
+                    <p class="card-text">A dollar bill classifying app that identifies the USD value of a dollar bill if a bill is identified via camera.</small></p>
                   </div>
                 </a>
               </div>
-              <div class="mx-auto" style="width: 280px;">
+              <div class="mx-auto my-4" style="width: 280px;">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#DoggosModal">
                   <img src="assets/DoggosPrev.png" class="card-img-top" alt="Doggos" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">Doggos</h5>
-                    <p class="card-text"><small>Love Dogs and want to look at dogs? This mobile app diaplays random dogs for your viewing pleasure.</small></p>
+                    <h4 class="card-title">Doggos</h4>
+                    <p class="card-text">Love Dogs and want to look at dogs? This mobile app diaplays random dogs for your viewing pleasure.</small></p>
                   </div>
                 </a>
               </div>      
-              <div class="mx-auto" style="width: 280px;">
+              <div class="mx-auto my-4" style="width: 280px;">
                 <a href="#" class="card bg-dark border-white mb-4 text-light " style="outline: none;" data-toggle="modal" data-target="#FalconBotModal">
                   <img src="assets/FalconBotPrev.png" class="card-img-top" alt="FalconBot" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">Falcon Tweeter</h5>
-                    <p class="card-text"><small>A Twitter bot that tweets a Captain Falcon move every 6 hours. Captain Falcon player? Checkout the twitter page!</small></p>
+                    <h4 class="card-title">Falcon Tweeter</h4>
+                    <p class="card-text">A Twitter bot that tweets a Captain Falcon move every 6 hours to @realcaptfalcon.</small></p>
                   </div>
                 </a>
               </div>   
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto my-4" style="width: 280px">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#HackMercedModal">
                   <img src="assets/HackMercedPrev.png" class="card-img-top" alt="HackMerced" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">HackMerced IV</h5>
-                    <p class="card-text"><small>Contributed to several of HackMerced's open-source repositories to build applications for the 4th annual hackathon.</small></p>
+                    <h4 class="card-title">HackMerced IV</h4>
+                    <p class="card-text">Contributed to HackMerced's open-source repositories to build sites for the 4th annual hackathon.</small></p>
                   </div>
                 </a>
               </div>
-              <div class="mx-auto" style="width: 280px">
+              <div class="mx-auto my-4" style="width: 280px">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#MyoHMIModal">
                   <img src="assets/MyoHMIPrev.png" class="card-img-top" alt="Myo-HMI" style="height: 150px;">
                   <div class="card-body">
-                    <h5 class="card-title">Myo HMI</h5>
-                    <p class="card-text"><small>A Myo-Armband android app for low-cost gesture recognition research. Users train the app to recognize hand gestures.</small></p>
+                    <h4 class="card-title">Myo HMI</h4>
+                    <p class="card-text">An Android app for low-cost gesture recognition research conducted by ICE Lab in SFSU.</small></p>
                   </div>
                 </a>
               </div>
             </div>           
             <!-- Modals -->
             <div class="modal fade" id="SeekItModal" tabindex="-1" role="dialog" aria-labelledby="SeekItModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -184,15 +199,15 @@
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="SeekItModalCenterTitle" style="display: inline-block;">SeekIt</h4>
                     <div class="float-right">
-                      <a href="https://github.com/chazt128/ScavengerHunt" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code (Web)</small></button></a>
+                      <a href="https://github.com/chazt128/ScavengerHunt" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Web)</small></button></a>
                       <br />
-                      <a href="https://github.com/chazt128/ScavengerHunt-Mobile" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code (Mobile)</small></button></a>
+                      <a href="https://github.com/chazt128/ScavengerHunt-Mobile" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Mobile)</small></button></a>
                     </div>
-                    <p><small>Team Size: 4</small></p>
-                    <p><small>Role: Lead Programmer / Project Manager</small></p>
-                    <p><small>Tech Utilized: React (web), React Native (iOS and Android), Firebase, Bootstrap</small></p>
-                    <p><small>Learned: React Router, React Navigation, NoSQL, Firebase (Authentication, Firestore, Storage), Bootstrap</small></p>
-                    <small>
+                    <p>Team Size: 4</small></p>
+                    <p>Role: Lead Programmer / Project Manager</small></p>
+                    <p>Tech Utilized: React (web), React Native (iOS and Android), Firebase, Bootstrap</small></p>
+                    <p>Learned: React Router, React Navigation, NoSQL, Firebase (Authentication, Firestore, Storage), Bootstrap</small></p>
+                    
                         <p>Main tasks performed:</p>
                         <ul>
                           <li>Architected the database (NoSQL) data structure.</li>
@@ -204,7 +219,7 @@
                           <li>Reviewed/Tested and merged pull requests from team members.</li>
                         </ul>
                       </small>
-                      <p><small>Description: This was a semester-long project for the Software Engineering course (CSE 120) at UC Merced. Our team had CZI (Chan Zuckerberg Initiative) as an industry sponsor and they instructed us to create an educational scavenger hunt application. We decided on developing this app to be on both web and mobile platforms mainly because we wanted to provide more options to different preferences, such as instructors preferring to use the web app for creating events and grading submissions. Our team was successful in developing an MVP (Minimum Viable Product) of both the web and mobile app within 3 months. Our app won 1st place in the CZI industry category (we competed with 2 other CZI teams), which allowed our team to participate as a finalist at UC Merced's annuel Mobile App Challenge (competed against other industry-sponsored teams).</small></p>
+                      <p>Description: This was a semester-long project for the Software Engineering course (CSE 120) at UC Merced. Our team had CZI (Chan Zuckerberg Initiative) as an industry sponsor and they instructed us to create an educational scavenger hunt application. We decided on developing this app to be on both web and mobile platforms mainly because we wanted to provide more options to different preferences, such as instructors preferring to use the web app for creating events and grading submissions. Our team was successful in developing an MVP (Minimum Viable Product) of both the web and mobile app within 3 months. Our app won 1st place in the CZI industry category (we competed with 2 other CZI teams), which allowed our team to participate as a finalist at UC Merced's annuel Mobile App Challenge (competed against other industry-sponsored teams).</small></p>
                   </div>         
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -213,7 +228,7 @@
               </div>
             </div>
             <div class="modal fade" id="JournalingModal" tabindex="-1" role="dialog" aria-labelledby="JournalingModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -223,10 +238,10 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="JournalingModalCenterTitle" style="display: inline-block;">Journaling</h4>
-                    <a href="https://github.com/chazt128/Journaling.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark"><small>Source Code</small></button></a>
-                    <p><small>Tech Utilized: React, Redux, Redux Saga, Reactstrap/Bootstrap, Node, Express, Mongoose/MongoDB</small></p>
-                    <p><small>Learned: Redux, Redux Saga, REST API (Node, Express, MongoDB), CRUD operations</small></p>
-                    <p><small>Description: This app allows a user to write, edit, delete, view, and filter journal entries. The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox. This was a great project to learn Redux and Redux Saga, as well as relearning the MERN stack (MongoDB, Express, React, Node) and how to built a RESTful backend server.</small></p>
+                    <a href="https://github.com/chazt128/Journaling.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</small></button></a>
+                    <p>Tech Utilized: React, Redux, Redux Saga, Reactstrap/Bootstrap, Node, Express, Mongoose/MongoDB</small></p>
+                    <p>Learned: Redux, Redux Saga, REST API (Node, Express, MongoDB), CRUD operations</small></p>
+                    <p>Description: This app allows a user to write, edit, delete, view, and filter journal entries. The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox. This was a great project to learn Redux and Redux Saga, as well as relearning the MERN stack (MongoDB, Express, React, Node) and how to built a RESTful backend server.</small></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -235,7 +250,7 @@
               </div>
             </div>
             <div class="modal fade" id="LilBillModal" tabindex="-1" role="dialog" aria-labelledby="LilBillModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -245,12 +260,12 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="LilBillModalCenterTitle" style="display: inline-block;">LilBill</h4>
-                    <a href="https://github.com/chazt128/Lil-Bill" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark"><small>Source Code</small></button></a>
-                    <p><small>Team Size: 4</small></p>
-                    <p><small>Role: Programmer</small></p>
-                    <p><small>Tech Utilized: React Native (iOS), TuriCreate</small></p>
-                    <p><small>Learned: React Native</small></p>
-                    <small>
+                    <a href="https://github.com/chazt128/Lil-Bill" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</small></button></a>
+                    <p>Team Size: 4</small></p>
+                    <p>Role: Programmer</small></p>
+                    <p>Tech Utilized: React Native (iOS), TuriCreate</small></p>
+                    <p>Learned: React Native</small></p>
+                    
                       <p>Main tasks performed:</p>
                       <ul>
                         <li>Implemented classi cation via camera to identify objects with rendered text and audio of the USD value if a dollar bill is detected.</li>
@@ -258,7 +273,7 @@
                         <li>Took over 200 pictures of dollar bills ($1, $5, $10, $20) that varied in background/surrounding content and angles taken.</li>
                       </ul>
                     </small> 
-                    <p><small>Description: This app was developed to be used for a user case study, recording the effectiveness of audio (speech) and tactile (vibrations) in different environments, for the Human-Computer Interaction course (CSE 155) at UC Merced. Our app is rather simple, it has the camera on the whole time and while a dollar bill is not in the camera view, it will display "NOT DOLLAR BILL". Otherwise, if there is a bill in the view, it is able to identify that bill's USD value. This is possible due to the 20,000+ images (online and personally taken) that we processed with TuriCreate to create a custom machine learning model. Although our team didn't have to develop an actual app for this type of study, we thought it would be worthwhile to build something for fun (took about 2 months). If you've ever heard of the show "Silicon Valley", our app was inspired by their "Not Hotdog" app which tells the user whether or not they are looking at a hotdog.</small></p>
+                    <p>Description: This app was developed to be used for a user case study, recording the effectiveness of audio (speech) and tactile (vibrations) in different environments, for the Human-Computer Interaction course (CSE 155) at UC Merced. Our app is rather simple, it has the camera on the whole time and while a dollar bill is not in the camera view, it will display "NOT DOLLAR BILL". Otherwise, if there is a bill in the view, it is able to identify that bill's USD value. This is possible due to the 20,000+ images (online and personally taken) that we processed with TuriCreate to create a custom machine learning model. Although our team didn't have to develop an actual app for this type of study, we thought it would be worthwhile to build something for fun (took about 2 months). If you've ever heard of the show "Silicon Valley", our app was inspired by their "Not Hotdog" app which tells the user whether or not they are looking at a hotdog.</small></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -267,7 +282,7 @@
               </div>
             </div>
             <div class="modal fade" id="DoggosModal" tabindex="-1" role="dialog" aria-labelledby="DoggosModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -277,10 +292,10 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="DoggosModalCenterTitle" style="display: inline-block;">Doggos</h4>
-                    <a href="https://github.com/chazt128/Doggos.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark"><small>Source Code</small></button></a>
-                    <p><small>Tech Utilized: React Native, Redux, Redux Saga</small></p>
-                    <p><small>Learned: Redux, Redux Saga</small></p>
-                    <p><small>Description: A simple app that utilizes TheDogAPI to display a random dog image or gif. I needed to learn redux and redux saga and wanted it to be a fun learning experience, so I chose to make a dog-based app. I may plan on adding more features in the future</small></p>
+                    <a href="https://github.com/chazt128/Doggos.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</small></button></a>
+                    <p>Tech Utilized: React Native, Redux, Redux Saga</small></p>
+                    <p>Learned: Redux, Redux Saga</small></p>
+                    <p>Description: A simple app that utilizes TheDogAPI to display a random dog image or gif. I needed to learn redux and redux saga and wanted it to be a fun learning experience, so I chose to make a dog-based app. I may plan on adding more features in the future</small></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -289,7 +304,7 @@
               </div>
             </div>
             <div class="modal fade" id="FalconBotModal" tabindex="-1" role="dialog" aria-labelledby="FalconBotModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -299,10 +314,10 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="FalconBotModalCenterTitle" style="display: inline-block;">Falcon Tweeter</h4>
-                    <a href="https://github.com/chazt128/FalconTweets" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark"><small>Source Code</small></button></a>
-                    <p><small>Tech Utilized: Node, Heroku</small></p>
-                    <p><small>Learned: Heroku</small></p>
-                    <p><small>Description: A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch). I utilized the Twitter API and a random word generator to generate random english words.</small></p>
+                    <a href="https://github.com/chazt128/FalconTweets" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</small></button></a>
+                    <p>Tech Utilized: Node, Heroku</small></p>
+                    <p>Learned: Heroku</small></p>
+                    <p>Description: A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch). I utilized the Twitter API and a random word generator to generate random english words.</small></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -311,7 +326,7 @@
               </div>
             </div>
             <div class="modal fade" id="HackMercedModal" tabindex="-1" role="dialog" aria-labelledby="HackMercedModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -322,17 +337,17 @@
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="HackMercedModalCenterTitle" style="display: inline-block;">HackMerced IV</h4>
                     <div class="float-right">
-                      <a href="https://github.com/HackMerced/HackMerced-IV" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code (Main)</small></button></a>
+                      <a href="https://github.com/HackMerced/HackMerced-IV" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Main)</small></button></a>
                       <br />
-                      <a href="https://github.com/HackMerced/HackMerced-IV-Live" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code (Live)</small></button></a>
+                      <a href="https://github.com/HackMerced/HackMerced-IV-Live" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Live)</small></button></a>
                       <br />
-                      <a href="https://github.com/HackMerced/hackmerced-mlh" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code {PreReg}</small></button></a>
+                      <a href="https://github.com/HackMerced/hackmerced-mlh" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code {PreReg}</small></button></a>
                     </div>
-                    <p><small>Team Size: 4</small></p>
-                    <p><small>Role: Director of Engineering</small></p>
-                    <p><small>Tech Utilized: React, React Native, Node, Express, Mongoose/MongoDB</small></p>
-                    <p><small>Learned: CSS, Node, Express, Mongoose/MongoDB</small></p>
-                    <small>
+                    <p>Team Size: 4</small></p>
+                    <p>Role: Director of Engineering</small></p>
+                    <p>Tech Utilized: React, React Native, Node, Express, Mongoose/MongoDB</small></p>
+                    <p>Learned: CSS, Node, Express, Mongoose/MongoDB</small></p>
+                    
                       <p>Main tasks performed:</p>
                       <ul>
                         <li>Implemented responsive web designs for all 4 sites.</li>
@@ -344,7 +359,7 @@
                         <li>Built a simple budgeting mobile app that allows users to list items with a purchase value for teaching a React Native workshop that I instructed.</li>
                       </ul>
                     </small>
-                    <p><small>Description: Created 3 website, contributed to 1 website, and built a mobile app to instruct a React Native Workshop for HackMerced IV. The main site is a single-page site that contains content regarding HackMerced IV with sections including About, FAQs, Sponsors, etc. We had over 500 applicants apply through our custom Typeform, a platform we utilized for applications. Our event had an attendance of over 350 participants and our live site provided content during the 36-hour event such as a countdown timer and necessary links. Lastly, we launched a temporary pre-registration site that allowed applicants to register their email a few months before our main site with our linked application form was deployed in its place. These sites are no longer live since the next HackMerced iteration will be taking over, but the source code is available for your viewing.</small></p>
+                    <p>Description: Created 3 website, contributed to 1 website, and built a mobile app to instruct a React Native Workshop for HackMerced IV. The main site is a single-page site that contains content regarding HackMerced IV with sections including About, FAQs, Sponsors, etc. We had over 500 applicants apply through our custom Typeform, a platform we utilized for applications. Our event had an attendance of over 350 participants and our live site provided content during the 36-hour event such as a countdown timer and necessary links. Lastly, we launched a temporary pre-registration site that allowed applicants to register their email a few months before our main site with our linked application form was deployed in its place. These sites are no longer live since the next HackMerced iteration will be taking over, but the source code is available for your viewing.</small></p>
                   </div>  
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -353,7 +368,7 @@
               </div>
             </div>
             <div class="modal fade" id="MyoHMIModal" tabindex="-1" role="dialog" aria-labelledby="MyoHMIModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
                     <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
@@ -363,12 +378,12 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="MyoHMIModalCenterTitle" style="display: inline-block;">Myo HMI</h4>
-                    <a href="https://github.com/chazt128/Myo-HMI-Android" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1"><small>Source Code</small></button></a>
-                    <p><small>Team Size: 6</small></p>
-                    <p><small>Role: Computer Engineer Intern</small></p>
-                    <p><small>Tech Utilized: Android Studio (Java, XML), Myo-Armband</small></p>
-                    <p><small>Learned: Android Studio, Android development with Java and XML</small></p>
-                    <small>
+                    <a href="https://github.com/chazt128/Myo-HMI-Android" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code</small></button></a>
+                    <p>Team Size: 6</small></p>
+                    <p>Role: Computer Engineer Intern</small></p>
+                    <p>Tech Utilized: Android Studio (Java, XML), Myo-Armband</small></p>
+                    <p>Learned: Android Studio, Android development with Java and XML</small></p>
+                    
                       <p>Main tasks performed:</p>
                       <ul>
                         <li>Implemented save data methods that saves 400 instances of training data per gesture trained into the android device's internal storage.</li>
@@ -382,7 +397,7 @@
                         <li>Wrote an abstract (co-author) based on research conducted with our app.</li>
                       </ul>
                     </small>
-                    <p><small>Description: HMI (Human-Machine Interface). Built a Myo-Armband Android app for low-cost gesture recognition research with a team of 6 that connects to a Myo-Armband to allow the user to train the app to recognize gestures when armband is worn. The user can select one of the default gestures (point, open-hand, fist) or create their own gesture by adding to the gesture list. Before training, the user can also select different features and classification algorithms to be active when processing the training data. When training gestures, the Myo-Armband acquires the electrical activity in the skeletal muscles as electromyographic data. Near the end of the internship, we were required to write a paper based on our application and related gesture recognition research we conducted. Our paper was later published and our team was awarded Best Diversity Paper Award at the American Society for Engineering Education Zone IV Conference.</small></p>
+                    <p>Description: HMI (Human-Machine Interface). Built a Myo-Armband Android app for low-cost gesture recognition research with a team of 6 that connects to a Myo-Armband to allow the user to train the app to recognize gestures when armband is worn. The user can select one of the default gestures (point, open-hand, fist) or create their own gesture by adding to the gesture list. Before training, the user can also select different features and classification algorithms to be active when processing the training data. When training gestures, the Myo-Armband acquires the electrical activity in the skeletal muscles as electromyographic data. Near the end of the internship, we were required to write a paper based on our application and related gesture recognition research we conducted. Our paper was later published and our team was awarded Best Diversity Paper Award at the American Society for Engineering Education Zone IV Conference.</small></p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -417,8 +432,6 @@
           window.location.hash = this.hash;
         });
       });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </script> 
   </body>
 </html>
