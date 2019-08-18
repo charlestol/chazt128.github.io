@@ -39,7 +39,7 @@
         background: gray !important;
         border: 1px solid white;
       }
-      .nav a, p {
+      .nav a, #about p, #portfolio.discription {
         font-size: 16px;
       }
       .card{
@@ -51,6 +51,12 @@
       }
       .card:hover {
         transform: scale(1.05);
+      }
+      .modal-body {
+        font-size: 14px;
+      }
+      .modal-body a {
+        font-size: 12px;
       }
       .list-group-item {
         border: none !important;
@@ -121,7 +127,7 @@
         <div class="tab-pane pt-5" id="portfolio">
           <div class="mt-4 mb-4">
             <h1 class="text-center pt-5">Projects</h1>
-            <p class="text-center mx-auto my-4 w-75" style="max-width: 450px">I love working on projects, collaborating with others, and exploring new technologies.<br /><br />Tap a card to see more info about it!</p>
+            <p class="text-center mx-auto my-4 w-75 description" style="max-width: 450px">I love working on projects, collaborating with others, and exploring new technologies.<br /><br />Tap a card to see more info about the project!</p>
             <div class="card-deck my-4">             
               <div class="mx-auto my-4" style="width: 280px;">
                 <a href="#" class="card bg-dark border-white mb-4 text-light" style="outline: none;" data-toggle="modal" data-target="#SeekItModal">
@@ -192,7 +198,7 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 5px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span>x</span>
                     </button>
                     <img src="assets/SeekIt.png" alt="SeekIt" class="w-100" />
@@ -200,29 +206,27 @@
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="SeekItModalCenterTitle" style="display: inline-block;">SeekIt</h4>
                     <div class="float-right">
-                      <a href="https://github.com/chazt128/ScavengerHunt" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Web)</button></a>
+                      <a href="https://github.com/chazt128/ScavengerHunt" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code (Web)</a>
                       <br />
-                      <a href="https://github.com/chazt128/ScavengerHunt-Mobile" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Mobile)</button></a>
+                      <a href="https://github.com/chazt128/ScavengerHunt-Mobile" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code (Mobile)</a>
                     </div>
                     <p>Team Size: 4</p>
                     <p>Role: Lead Programmer / Project Manager</p>
                     <p>Tech Utilized: React (web), React Native (iOS and Android), Firebase, Bootstrap</p>
-                    <p>Learned: React Router, React Navigation, NoSQL, Firebase (Authentication, Firestore, Storage), Bootstrap</p>
-                    
-                        <p>Main tasks performed:</p>
-                        <ul>
-                          <li>Implemented the web design and functionalities (Authentication, Student-User, Instructor-User).</li>
-                          <br />
-                          <li>Implemented the student-user functionality for mobile.</li>
-                          <br />
-                          <li>Integrated Firebase for authentication, cloud 􀁽restore (NoSQL) for user and event data, and storage for image submissions.</li>
-                          <br />
-                          <li>Met with CZI engineers weekly to give updates on progress and to receive assistance on development issues.</li>
-                          <br />
-                          <li>Reviewed/Tested and merged pull requests from team members.</li>
-                        </ul>
-                      
-                      <p>Description: This was a semester-long project for the Software Engineering course (CSE 120) at UC Merced. Our team had CZI (Chan Zuckerberg Initiative) as an industry sponsor and they instructed us to create an educational scavenger hunt application. We decided on developing this app to be on both web and mobile platforms mainly because we wanted to provide more options to different preferences, such as instructors preferring to use the web app for creating events and grading submissions. Our team was successful in developing an MVP (Minimum Viable Product) of both the web and mobile app within 3 months. Our app won 1st place in the CZI industry category (we competed with 2 other CZI teams), which allowed our team to participate as a finalist at UC Merced's annuel Mobile App Challenge (competed against other industry-sponsored teams).</p>
+                    <p>Learned: React Router, React Navigation, NoSQL, Firebase (Authentication, Firestore, Storage), Bootstrap</p>   
+                    <p>Main tasks performed:</p>
+                    <ul>
+                      <li>Implemented the web design and functionalities (Authentication, Student-User, Instructor-User).</li>
+                      <br />
+                      <li>Implemented the student-user functionality for mobile.</li>
+                      <br />
+                      <li>Integrated Firebase for authentication, cloud 􀁽restore (NoSQL) for user and event data, and storage for image submissions.</li>
+                      <br />
+                      <li>Met with CZI engineers weekly to give updates on progress and to receive assistance on development issues.</li>
+                      <br />
+                      <li>Reviewed/Tested and merged pull requests from team members.</li>
+                    </ul>
+                    <p>Description: This was a semester-long project for the Software Engineering course (CSE 120) at UC Merced. Our team had CZI (Chan Zuckerberg Initiative) as an industry sponsor and they instructed us to create an educational scavenger hunt application. We decided on developing this app to be on both web and mobile platforms mainly because we wanted to provide more options to different preferences, such as instructors preferring to use the web app for creating events and grading submissions. Our team was successful in developing an MVP (Minimum Viable Product) of both the web and mobile app within 3 months. Our app won 1st place in the CZI industry category (we competed with 2 other CZI teams), which allowed our team to participate as a finalist at UC Merced's annuel Mobile App Challenge (competed against other industry-sponsored teams).</p>
                   </div>         
                   <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -234,14 +238,14 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>                       
                     <img src="assets/Journaling.png" alt="Journaling" class="w-100" />    
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="JournalingModalCenterTitle" style="display: inline-block;">Journaling</h4>
-                    <a href="https://github.com/chazt128/Journaling.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</button></a>
+                    <a href="https://github.com/chazt128/Journaling.git" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code</a>
                     <p>Tech Utilized: React, Redux, Redux Saga, Reactstrap/Bootstrap, Node, Express, Mongoose/MongoDB</p>
                     <p>Learned: Redux, Redux Saga, REST API (Node, Express, MongoDB), CRUD operations</p>
                     <p>Description: This app allows a user to write, edit, delete, view, and filter journal entries. The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox. This was a great project to learn Redux and Redux Saga, as well as relearning the MERN stack (MongoDB, Express, React, Node) and how to built a RESTful backend server.</p>
@@ -256,26 +260,24 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>                       
                     <img src="assets/LilBill.png" alt="LilBill" class="w-100" />    
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="LilBillModalCenterTitle" style="display: inline-block;">LilBill</h4>
-                    <a href="https://github.com/chazt128/Lil-Bill" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</button></a>
+                    <a href="https://github.com/chazt128/Lil-Bill" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code</button></a>
                     <p>Team Size: 4</p>
                     <p>Role: Programmer</p>
                     <p>Tech Utilized: React Native (iOS), TuriCreate</p>
-                    <p>Learned: React Native</p>
-                    
-                      <p>Main tasks performed:</p>
-                      <ul>
-                        <li>Implemented classi cation via camera to identify objects with rendered text and audio of the USD value if a dollar bill is detected.</li>
-                        <br />
-                        <li>Took over 200 pictures of dollar bills ($1, $5, $10, $20) that varied in background/surrounding content and angles taken.</li>
-                      </ul>
-                     
+                    <p>Learned: React Native</p>   
+                    <p>Main tasks performed:</p>
+                    <ul>
+                      <li>Implemented classi cation via camera to identify objects with rendered text and audio of the USD value if a dollar bill is detected.</li>
+                      <br />
+                      <li>Took over 200 pictures of dollar bills ($1, $5, $10, $20) that varied in background/surrounding content and angles taken.</li>
+                    </ul>
                     <p>Description: This app was developed to be used for a user case study, recording the effectiveness of audio (speech) and tactile (vibrations) in different environments, for the Human-Computer Interaction course (CSE 155) at UC Merced. Our app is rather simple, it has the camera on the whole time and while a dollar bill is not in the camera view, it will display "NOT DOLLAR BILL". Otherwise, if there is a bill in the view, it is able to identify that bill's USD value. This is possible due to the 20,000+ images (online and personally taken) that we processed with TuriCreate to create a custom machine learning model. Although our team didn't have to develop an actual app for this type of study, we thought it would be worthwhile to build something for fun (took about 2 months). If you've ever heard of the show "Silicon Valley", our app was inspired by their "Not Hotdog" app which tells the user whether or not they are looking at a hotdog.</p>
                   </div>
                   <div class="modal-footer">
@@ -288,14 +290,14 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>                       
                     <img src="assets/Doggos.png" alt="Journaling" class="w-100" />    
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="DoggosModalCenterTitle" style="display: inline-block;">Doggos</h4>
-                    <a href="https://github.com/chazt128/Doggos.git" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</button></a>
+                    <a href="https://github.com/chazt128/Doggos.git" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code</a>
                     <p>Tech Utilized: React Native, Redux, Redux Saga</p>
                     <p>Learned: Redux, Redux Saga</p>
                     <p>Description: A simple app that utilizes TheDogAPI to display a random dog image or gif. I needed to learn redux and redux saga and wanted it to be a fun learning experience, so I chose to make a dog-based app. I may plan on adding more features in the future</p>
@@ -310,14 +312,14 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>                       
                     <img src="assets/FalconBot.png" alt="FalconBot" class="w-100" />    
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="FalconBotModalCenterTitle" style="display: inline-block;">Falcon Tweeter</h4>
-                    <a href="https://github.com/chazt128/FalconTweets" target="_blank" rel="noopener noreferrer" style="float: right;"><button type="button" class="btn btn-dark">Source Code</button></a>
+                    <a href="https://github.com/chazt128/FalconTweets" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code</a>
                     <p>Tech Utilized: Node, Heroku</p>
                     <p>Learned: Heroku</p>
                     <p>Description: A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch). I utilized the Twitter API and a random word generator to generate random english words.</p>
@@ -332,7 +334,7 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>  
                     <img src="assets/HackMerced.png" alt="HackMerced" class="w-100" />  
@@ -340,28 +342,22 @@
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="HackMercedModalCenterTitle" style="display: inline-block;">HackMerced IV</h4>
                     <div class="float-right">
-                      <a href="https://github.com/HackMerced/HackMerced-IV" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Main)</button></a>
-                      <br />
-                      <a href="https://github.com/HackMerced/HackMerced-IV-Live" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code (Live)</button></a>
-                      <br />
-                      <a href="https://github.com/HackMerced/hackmerced-mlh" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code {PreReg}</button></a>
+                      <a href="https://github.com/hackmerced" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Github</a>
                     </div>
                     <p>Team Size: 4</p>
                     <p>Role: Director of Engineering</p>
                     <p>Tech Utilized: React, React Native, Node, Express, Mongoose/MongoDB</p>
                     <p>Learned: CSS, Node, Express, Mongoose/MongoDB</p>
-                    
-                      <p>Main tasks performed:</p>
-                      <ul>
-                        <li>Implemented responsive web designs for all 4 sites.</li>
-                        <br />
-                        <li>Built a RESTful backend server that stoes emails from the Pre-Registration site.</li>
-                        <br />
-                        <li>Reviewed and merged pull requests on Github.</li>
-                        <br />
-                        <li>Built a simple budgeting mobile app that allows users to list items with a purchase value for teaching a React Native workshop that I instructed.</li>
-                      </ul>
-                    
+                    <p>Main tasks performed:</p>
+                    <ul>
+                      <li>Implemented responsive web designs for all 4 sites.</li>
+                      <br />
+                      <li>Built a RESTful backend server that stoes emails from the Pre-Registration site.</li>
+                      <br />
+                      <li>Reviewed and merged pull requests on Github.</li>
+                      <br />
+                      <li>Built a simple budgeting mobile app that allows users to list items with a purchase value for teaching a React Native workshop that I instructed.</li>
+                    </ul>
                     <p>Description: Created 3 website, contributed to 1 website, and built a mobile app to instruct a React Native Workshop for HackMerced IV. The main site is a single-page site that contains content regarding HackMerced IV with sections including About, FAQs, Sponsors, etc. We had over 500 applicants apply through our custom Typeform, a platform we utilized for applications. Our event had an attendance of over 350 participants and our live site provided content during the 36-hour event such as a countdown timer and necessary links. Lastly, we launched a temporary pre-registration site that allowed applicants to register their email a few months before our main site with our linked application form was deployed in its place. These sites are no longer live since the next HackMerced iteration will be taking over, but the source code is available for your viewing.</p>
                   </div>  
                   <div class="modal-footer">
@@ -374,19 +370,18 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content bg-secondary">
                   <div class="modal-header">
-                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 1px; top: 0; outline: none;">
+                    <button type="button" class="close position-absolute text-white" data-dismiss="modal" aria-label="Close" style="right: 0px; top: 0; outline: none;">
                       <span aria-hidden="true">x</span>
                     </button>  
                     <img src="assets/MyoHMI.png" alt="MyoHMI" class="w-100" />
                   </div>
                   <div class="modal-body">
                     <h4 class="modal-title mb-2" id="MyoHMIModalCenterTitle" style="display: inline-block;">Myo HMI</h4>
-                    <a href="https://github.com/chazt128/Myo-HMI-Android" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-dark float-right mb-1">Source Code</button></a>
+                    <a href="https://github.com/chazt128/Myo-HMI-Android" target="_blank" rel="noopener noreferrer" class="btn btn-dark float-right mb-1">Source Code</a>
                     <p>Team Size: 6</p>
                     <p>Role: Computer Engineer Intern</p>
                     <p>Tech Utilized: Android Studio (Java, XML), Myo-Armband</p>
-                    <p>Learned: Android Studio, Android development with Java and XML</p>
-                    
+                    <p>Learned: Android Studio, Android development with Java and XML</p>               
                       <p>Main tasks performed:</p>
                       <ul>
                         <li>Implemented save data methods that saves 400 instances of training data per gesture trained into the android device's internal storage.</li>
@@ -398,8 +393,7 @@
                         <li>Conducted a user case study on 10 participants which had them utilize the app and rate categories (Responsiveness, Accuracy, Ease of Use, Aesthetic) from 1 to 5 (1 being "worst" and 5 being "great")</li>
                         <br />
                         <li>Wrote an abstract (co-author) based on research conducted with our app.</li>
-                      </ul>
-                    
+                      </ul>  
                     <p>Description: HMI (Human-Machine Interface). Built a Myo-Armband Android app for low-cost gesture recognition research with a team of 6 that connects to a Myo-Armband to allow the user to train the app to recognize gestures when armband is worn. The user can select one of the default gestures (point, open-hand, fist) or create their own gesture by adding to the gesture list. Before training, the user can also select different features and classification algorithms to be active when processing the training data. When training gestures, the Myo-Armband acquires the electrical activity in the skeletal muscles as electromyographic data. Near the end of the internship, we were required to write a paper based on our application and related gesture recognition research we conducted. Our paper was later published and our team was awarded Best Diversity Paper Award at the American Society for Engineering Education Zone IV Conference.</p>
                   </div>
                   <div class="modal-footer">
