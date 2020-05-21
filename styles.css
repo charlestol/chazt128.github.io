@@ -1,0 +1,108 @@
+* {
+    font-family: 'Varela Round', sans-serif; 
+    letter-spacing: 2px; 
+    font-feature-settings: 'liga' 0;
+  }
+html {
+    background: rgb(51, 50, 50) !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100%;
+    min-width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.active {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+}
+
+.hide {
+    display: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+nav > ul > li:hover {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+}
+
+nav > ul > li:not(:last-child) {
+    margin-right: 10px;
+}
+
+nav > ul > li:not(:last-child):hover {
+    cursor: pointer;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+footer > ul > li:not(:last-child) {
+    margin-right: 5px;
+}
+
+footer > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+.fa-2x {
+    font-size: 1.2em !important;
+}
+
+#copyright {
+    margin-top: 15px;
+    font-size: x-small;
+}
+
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
