@@ -25,13 +25,13 @@ h1 {
     font-size: 4em;
 }
 
-p, li:not(.contact-links) {
+p, li:not(.contact-link) {
     font-size: 2em;
 }
 
-.active {
+.active, .tab:hover, .tab:focus, .tab > a:focus,.contact-link > a:hover, .contact-link > a:focus {
     border-bottom: 2px solid #000;
-    padding-bottom: 1px;
+    padding-bottom: 1.5px;
 }
 
 .hide {
@@ -51,21 +51,11 @@ ul > li:not(:last-child) {
     margin-right: 15px;
 }
 
-nav > ul > li:hover {
-    border-bottom: 2px solid #000;
-    padding-bottom: 1px;
-}
-
-nav > ul > li:not(:last-child):hover {
+.tab:not(:last-child):hover {
     cursor: pointer;
 }
 
-nav > ul > li > a {
-    text-decoration: none;
-    color: black;
-}
-
-footer > ul > li > a {
+.contact-link > a, .tab > a {
     color: black;
     text-decoration: none;
 }
@@ -74,6 +64,24 @@ footer > ul > li > a {
     margin-top: 30px;
     font-size: larger;
 }
+
+@media screen and (max-width: 767px) {
+    body {
+      padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    
+    p, li:not(.contact-link) {
+        font-size: 1em;
+    }
+
+    #copyright {
+        margin-top: 20px;
+        font-size: small;
+    }
+  }
 
 .fade-in {
     animation: fadeIn ease 3s;
