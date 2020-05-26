@@ -20,7 +20,7 @@ let toggleContent = tab => {
             aboutTabClasses.add('active');
             portfolioTabClasses.remove('active');
             // update URL Path to current tab
-            history.pushState(null, '', '/'); 
+            // history.pushState(null, '', '/'); 
         }
     } else {
         if(portfolioClasses.contains('hide')) {
@@ -31,7 +31,7 @@ let toggleContent = tab => {
             portfolioTabClasses.add('active');
             aboutTabClasses.remove('active');
             // update URL Path to current tab
-            history.pushState(null, '', '/portfolio'); 
+            // history.pushState(null, '', '/portfolio'); 
         } 
     }
 }
