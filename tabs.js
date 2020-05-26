@@ -36,5 +36,7 @@ let toggleContent = tab => {
     }
 }
 
+console.log(window.location.pathname)
+
 aboutTab.addEventListener("click", e => toggleContent(e.target.textContent));
 portfolioTab.addEventListener("click", e => toggleContent(e.target.textContent));
