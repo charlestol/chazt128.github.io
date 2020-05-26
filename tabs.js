@@ -34,9 +34,8 @@ let toggleContent = tab => {
             // history.pushState(null, '', '/portfolio'); 
         } 
     }
+    console.log(window.location.pathname)
 }
-
-console.log(window.location.pathname)
 
 aboutTab.addEventListener("click", e => toggleContent(e.target.textContent));
 portfolioTab.addEventListener("click", e => toggleContent(e.target.textContent));
