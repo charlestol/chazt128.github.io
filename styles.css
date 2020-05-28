@@ -51,6 +51,10 @@ h2, p, li:not(.contact-link) {
     font-size: 1.7em;
 }
 
+a:focus {
+    outline: none;
+}
+
 .active, .tab:hover, .tab:focus, .tab > a:focus,.contact-link > a:hover, .contact-link > a:focus {
     border-bottom: 2px solid #000;
     padding-bottom: 1.5px;
