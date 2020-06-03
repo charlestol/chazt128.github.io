@@ -46,11 +46,11 @@ ul {
     padding: 0;
 }
 
-li {
+nav > ul > li, footer > ul > li {
     display: inline;
 }
 
-ul > li:not(:last-child) {
+nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
     margin-right: 15px;
 }
 
@@ -214,7 +214,7 @@ ul > li:not(:last-child) {
 	font-size: 1.15em;
 }
 
-.modal-content > div p {
+#modalDescription > li {
 	margin: 0;
     padding: 10px 0;
     font-size: larger;

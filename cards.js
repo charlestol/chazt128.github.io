@@ -5,7 +5,7 @@ import projects from './projects.js';
 const cardDeck = document.getElementById('cardDeck');
 
 // Create new Card
-const cardTemplate = ( id, {name, cardDesc, tech} ) => {
+const cardTemplate = (id, {name, cardDesc, tech}) => {
   return `
   <div class="card modal-btn" id='${id}'>
     <div class="container">
@@ -28,21 +28,31 @@ const modal = document.getElementsByClassName('modal')[0];
 const modalOverlay = document.getElementById('overlay');
 const modalCloseButton = document.getElementById('close');
 const modalHeader = document.getElementById('modalHeader');
+const modalDescription = document.getElementById('modalDescription');
 
-const setModalContent = header => {
-  modalHeader.textContent = header;
+const setModalContent = ({name, modalDesc}) => {
+  modalHeader.textContent = name;
+  for(let desc of modalDesc) {
+    let newDecs = document.createElement('li');
+    newDecs.textContent = desc;
+    console.log(newDecs)
+    modalDescription.appendChild(newDecs);
+  }
 }
 
 function openModal() {
   if(!modal.classList.contains('show')) {
     modal.classList.add('show');
-    setModalContent(this.id)
+    let cardId = this.id;
+    setModalContent(projects[cardId]);
   }
 }
 
 function closeModal() {
-  if(modal.classList.contains('show'))
+  if(modal.classList.contains('show')) {
     modal.classList.remove('show');
+    modalDescription.innerHTML = '';
+  }
 }
 
 for(let card of cards) {
