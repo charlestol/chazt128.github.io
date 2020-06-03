@@ -14,8 +14,8 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 40px;
+    margin: inherit;
+    padding: inherit;
     width: inherit;
     min-height: inherit;
     -moz-box-sizing: border-box;
@@ -24,8 +24,27 @@ body {
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
+#about, #portfolio {
+    padding: 40px 40px 0 40px;
+}
+
+nav, footer {
+    padding-left: 40px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    padding-top: 40px;
+}
+
+footer {
+    padding-bottom: 40px;
+}
+
 h1 {
     font-size: 4em;
+    margin-top: 1em;
 }
 
 h2, p, li:not(.contact-link) {
@@ -89,13 +108,8 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
     /* cursor: pointer; */
 }
 
-.card > img {
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-}
-
 .card > .container {
-    padding: 2px 16px;
+    padding: 2px 20px;
 }
 
 .card > .container > p {
