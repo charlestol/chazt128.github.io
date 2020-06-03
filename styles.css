@@ -69,11 +69,11 @@ ul {
     padding: 0;
 }
 
-li {
+nav > ul > li, footer > ul > li {
     display: inline;
 }
 
-ul > li:not(:last-child) {
+nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
     margin-right: 15px;
 }
 
@@ -120,41 +120,6 @@ ul > li:not(:last-child) {
     font-size: large;
 }
 
-@media screen and (max-width: 767px) {
-    #about, #portfolio {
-        padding: 20px 20px 0 20px;
-    }
-
-    nav, footer {
-        padding-left: 20px;
-    }
-
-    nav {
-        padding-top: 20px;
-    }
-
-    footer {
-        padding-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-    
-    p, li:not(.contact-link) {
-        font-size: 1em;
-    }
-
-    #copyright {
-        margin-top: 20px;
-        font-size: small;
-    }
-
-    #cardDeck {
-        margin-bottom: 1em;
-    }
-  }
-
 .fade-in {
     animation: fadeIn ease 3s;
     -webkit-animation: fadeIn ease 3s;
@@ -186,3 +151,155 @@ ul > li:not(:last-child) {
     0% {opacity:0;}
     100% {opacity:1;}
 }
+
+#close {
+	position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    width: 60%;
+	max-height: 90vh;
+	height: auto;
+	z-index: 2000;
+	overflow: auto;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.show {
+	visibility: visible;
+}
+
+#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(68, 67, 67, 0.747);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.show ~ #overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.modal-content {
+	/* color: #fff; */
+	background: #fdfcfb;
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.modal-content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.modal-content > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+#modalDescription > li {
+	margin: 0;
+    padding: 10px 0;
+    font-size: larger;
+}
+
+.modal-content > div ul {
+	margin: 0;
+	padding: 0 0 30px 20px;
+}
+
+.modal-content > div ul li {
+	padding: 5px 0;
+}
+
+.modal.slide-effect {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.slide-effect .modal-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+	-moz-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+	-ms-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+	transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.show.slide-effect .modal-content {
+	-webkit-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+	-moz-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+	-ms-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+	transform: translateZ(0px) translateX(0%) rotateY(0deg);
+	opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+      padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    
+    p, li:not(.contact-link) {
+        font-size: 1em;
+    }
+
+    #copyright {
+        margin-top: 20px;
+        font-size: small;
+    }
+
+    #cardDeck {
+        margin-bottom: 1em;
+    }
+
+    .modal {
+        width: 80%;
+    }
+  }
