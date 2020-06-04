@@ -7,7 +7,7 @@ const cardDeck = document.getElementById('cardDeck');
 // Create new Card
 const cardTemplate = (id, {name, cardDesc, tech}) => {
   return `
-  <div class="card modal-btn" id='${id}'>
+  <div class="card modal-btn" id='${id}' tabIndex='0'>
     <div class="container">
       <h2>${name}</h2>
       <p>${cardDesc}</p>
@@ -28,23 +28,23 @@ const modal = document.getElementsByClassName('modal')[0];
 const modalOverlay = document.getElementById('overlay');
 const modalCloseButton = document.getElementById('close');
 const modalHeader = document.getElementById('modalHeader');
+const modalImage = document.getElementById('modalImage');
 const modalDescription = document.getElementById('modalDescription');
 
-const setModalContent = ({name, modalDesc}) => {
+const setModalContent = ({name, modalImg, modalDesc}) => {
   modalHeader.textContent = name;
+  modalImage.src = modalImg;
   for(let desc of modalDesc) {
     let newDecs = document.createElement('li');
     newDecs.textContent = desc;
-    console.log(newDecs)
     modalDescription.appendChild(newDecs);
   }
 }
 
-function openModal() {
+function openModal({target}) {
   if(!modal.classList.contains('show')) {
     modal.classList.add('show');
-    let cardId = this.id;
-    setModalContent(projects[cardId]);
+    setModalContent(projects[target.id || this.id]);
   }
 }
 
@@ -59,6 +59,7 @@ for(let card of cards) {
   let currModal = modal.cloneNode(true);
   currModal.innerHTML += 'YES'
   card.addEventListener('click', openModal);
+  card.addEventListener('keyup', event => event.key === 'Enter' && openModal(event));
 }
 
 modalOverlay.addEventListener('click', closeModal);

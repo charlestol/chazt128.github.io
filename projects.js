@@ -1,7 +1,21 @@
 export default {
+  robertHalfCard: {
+    name: 'Robert Half',
+    cardDesc: 'Revamped and built several of the company\'s multilingual web pages across 19 countries.',
+    modalImg: '/assets/RobertHalf.png',
+    modalDesc: [
+      'Role: Front End Developer',
+      'Revamped and built several multilingual web pages across 19 countries utilizing Drupal 8 in Agile two-week sprints.',
+      'Built responsive and reusable components with emphasis on ADA compliance.',
+      'Utilized Tealium and Google Tag Manager APIs to implement site-wide tracking in conjunction with the Analytics team.',
+      'Instantiated Git into the team\'s workflow and contributed to codebase management via code reviews in Bitbucket.'    
+    ],
+    tech: 'Drupal, HTML, CSS, Bootstrap, Javascript, jQuery'
+  },
   seekItCard: {
     name: 'SeekIt',
-    cardDesc: 'A web and mobile platform that allows instructors to take education beyond the classroom.',
+    cardDesc: 'Spearheaded a team of 4 to build a platform that allows instructors to take education beyond the classroom.',
+    modalImg: '/assets/SeekIt.png',
     modalDesc: [
       'Spearheaded a team of 4 to build a platform to allow instructors to engage students in assignments outside of the classroom. MVP was completed within 2.5 months.',
       'Built the app on both mobile and web. We did this considering user type preferences. Instructors may prefer to assign and grade assignments on a web browser whereas students will most likely be using a phone for outdoor tasks.',
@@ -13,6 +27,7 @@ export default {
   journalingCard: {
     name: 'Journaling',
     cardDesc: 'A simple web app for writing and viewing journal entries in chronological order.',
+    modalImg: '/assets/Journaling.png',
     modalDesc: [
       'This app allows a user to write, edit, delete, view, and filter journal entries.',
       'The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox.',
@@ -22,7 +37,8 @@ export default {
   },
   lilBillCard: {
     name: 'LilBill',
-    cardDesc: 'An iOS app that uses the camera to identify the value of a dollar bill.',
+    cardDesc: 'Built an iOS app with a classmate that uses the camera to identify the value of a dollar bill.',
+    modalImg: '/assets/LilBill.png',
     modalDesc: [
       'Worked with a team of 4 to build an iOS dollar bill classifier app for a case study on audio and tactile feedback. The app identifies the value of a dollar bill via camera.',
       'Utilized over 20,000 pictures of dollar bills ($1, $5, $10, $20) that varied in background/surrounding content and angles taken.',
@@ -34,6 +50,7 @@ export default {
   falconCard: {
     name: 'Falcon Tweeter',
     cardDesc: 'A twitter bot that tweets a Captain Falcon move every 6 hours.',
+    modalImg: '/assets/FalconBot.png',
     modalDesc: [
       'A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch).',
       'Utilized the Twitter API and a random word generator to generate random English words.'
@@ -42,7 +59,8 @@ export default {
   },
   hackmercedCard: {
     name: 'HackMerced 4.0',
-    cardDesc: 'The Pre-Registration, Main, and Live site for HackMerced\'s 4th annual hackathon',
+    cardDesc: 'Worked with and managed 12 Software Engineers to build software for HackMerced\'s 4th annual hackathon.',
+    modalImg: '/assets/HackMerced.png',
     modalDesc: [
       'Role: Director of Engineering',
       'Worked with and managed 12 Software Engineers to built software for the 4th iteration of the largest hackathon in the san joaquin valley. HackMerced had over 500 applicants and over 350 attendees. For the first time, our event won Program of the Year at UC Merced.',
@@ -54,7 +72,8 @@ export default {
   },
   myoCard: {
     name: 'Myo HMI (Human-Machine Interface)',
-    cardDesc: 'An Android app for low-cost gesture recognition research conducted by ICE Lab in SFSU.',
+    cardDesc: 'Built an Android app with a team of 6 for low-cost gesture recognition research conducted by ICE Lab in SFSU.',
+    modalImg: '/assets/MyoHMI.png',
     modalDesc: [
       'Role: Computer Engineer Intern',
       'Built a Myo-Armband Android app for low-cost gesture recognition research with a team of 6 that connects to a Myo-Armband to allow the user to train the app to recognize gestures when armband is worn.',
