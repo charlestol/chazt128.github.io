@@ -51,6 +51,8 @@ function openModal({target}) {
 function closeModal() {
   if(modal.classList.contains('show')) {
     modal.classList.remove('show');
+    modalHeader.textContent = '';
+    modalImage.src = '';
     modalDescription.innerHTML = '';
   }
 }
