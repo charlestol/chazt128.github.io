@@ -2,14 +2,22 @@
 import projects from './projects.js';
 
 // Get DOM Elements
-const cardDeck = document.getElementById('cardDeck');
+const professional = document.getElementById('professional');
+const personal = document.getElementById('personal');
+const cards = document.getElementsByClassName('card');
+const modal = document.getElementsByClassName('modal')[0];
+const modalOverlay = document.getElementById('overlay');
+const modalCloseButton = document.getElementById('close');
+const modalHeader = document.getElementById('modalHeader');
+const modalImage = document.getElementById('modalImage');
+const modalDescription = document.getElementById('modalDescription');
 
 // Create new Card
 const cardTemplate = (id, {name, cardDesc, tech}) => {
   return `
   <div class="card modal-btn" id='${id}' tabIndex='0'>
     <div class="container">
-      <h2>${name}</h2>
+      <h3>${name}</h3>
       <p>${cardDesc}</p>
       <p>
         <b>Utilized</b>: ${tech}
@@ -20,16 +28,12 @@ const cardTemplate = (id, {name, cardDesc, tech}) => {
 
 // Generate Project Cards
 for(let project in projects) {
-  cardDeck.innerHTML += cardTemplate(project, projects[project]);
+  let currCard = cardTemplate(project, projects[project]);
+  if(projects[project].type === 'professional')
+    professional.innerHTML += currCard;
+  else
+    personal.innerHTML += currCard;
 }
-
-const cards = document.getElementsByClassName('card');
-const modal = document.getElementsByClassName('modal')[0];
-const modalOverlay = document.getElementById('overlay');
-const modalCloseButton = document.getElementById('close');
-const modalHeader = document.getElementById('modalHeader');
-const modalImage = document.getElementById('modalImage');
-const modalDescription = document.getElementById('modalDescription');
 
 const setModalContent = ({name, modalImg, modalDesc}) => {
   modalHeader.textContent = name;

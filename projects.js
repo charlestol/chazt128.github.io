@@ -10,7 +10,8 @@ export default {
       'Utilized Tealium and Google Tag Manager APIs to implement site-wide tracking in conjunction with the Analytics team.',
       'Instantiated Git into the team\'s workflow and contributed to codebase management via code reviews in Bitbucket.'    
     ],
-    tech: 'Drupal, HTML, CSS, Bootstrap, Javascript, jQuery'
+    tech: 'Bootstrap, jQuery, Drupal',
+    type: 'professional'
   },
   seekItCard: {
     name: 'SeekIt',
@@ -19,10 +20,11 @@ export default {
     modalDesc: [
       'Spearheaded a team of 4 to build a platform to allow instructors to engage students in assignments outside of the classroom. MVP was completed within 2.5 months.',
       'Built the app on both mobile and web. We did this considering user type preferences. Instructors may prefer to assign and grade assignments on a web browser whereas students will most likely be using a phone for outdoor tasks.',
-      'This project was sponsored by Chan Zuckerberg Initiative and we met with Software Engineers from their company weekly for updates and mentoring.',
+      'This project was sponsored by Chan Zuckerberg Initiative in the Software Engineering course (CSE 120) at UC Merced. I met with Software Engineers from their company weekly for delivering updates and to receive mentoring on challenging topics.',
       'Awarded 1st place for the Chan Zuckerberg Initiative industry category at UC Merced’s annual Mobile App Challenge.'
     ],
-    tech: 'React, React Native, Firebase, Bootstrap'
+    tech: 'React, React Native, Firebase, Bootstrap',
+    type: 'personal'
   },
   journalingCard: {
     name: 'Journaling',
@@ -33,7 +35,8 @@ export default {
       'The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox.',
       'This was a great and simple project to learn how to built a RESTful API, using Redux and Redux Saga, and solidifying my utilization of the MERN stack (MongoDB, Express, React, Node).'
     ],
-    tech: 'React, Redux, Redux Saga, Bootstrap, Node, Express, MongoDB'
+    tech: 'React, Redux, Redux Saga, Bootstrap, Node, Express, MongoDB',
+    type: 'personal'
   },
   lilBillCard: {
     name: 'LilBill',
@@ -45,7 +48,8 @@ export default {
       'This app was developed to be used for a user case study, recording the effectiveness of audio (speech) and tactile (vibrations) in different environments, for the Human-Computer Interaction course (CSE 155) at UC Merced.',
       'If you\'ve ever heard of the show "Silicon Valley", our app was inspired by their "Not Hotdog" app which tells the user whether or not they are looking at a hotdog.'
     ],
-    tech: 'React Native, TuriCreate'
+    tech: 'React Native, TuriCreate',
+    type: 'personal'
   },
   falconCard: {
     name: 'Falcon Tweeter',
@@ -55,7 +59,8 @@ export default {
       'A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch).',
       'Utilized the Twitter API and a random word generator to generate random English words.'
     ],
-    tech: 'Node, Twitter API, Heroku'
+    tech: 'Node, Twitter API, Heroku',
+    type: 'personal'
   },
   hackmercedCard: {
     name: 'HackMerced 4.0',
@@ -68,7 +73,8 @@ export default {
       'Built a RESTful server that stored emails from the Pre-Registration site.',
       'Built a simple budgeting mobile app that allows users to list items with a purchase value for a React Native workshop that I instructed.'
     ],
-    tech: 'React, React Native, Node, Express, MongoDB'
+    tech: 'React, React Native, Node, Express, MongoDB',
+    type: 'professional'
   },
   myoCard: {
     name: 'Myo HMI (Human-Machine Interface)',
@@ -80,7 +86,8 @@ export default {
       'The user can select one of the default gestures (point, open-hand, fist) or create their own gesture by adding to the gesture list. Before training, the user can also select different features and classification algorithms to be active when processing the training data. When training gestures, the Myo-Armband acquires the electrical activity in the skeletal muscles as electromyographic data.',
       'Collaborated in writing an abstract based on research conducted with our app that was later published and our team was awarded Best Diversity Paper Award at the American Society for Engineering Education Zone IV Conference.'
     ],
-    tech: 'Android Studio, Myo-Armband'
+    tech: 'Android Studio, Myo-Armband',
+    type: 'professional'
   }
 };
 
