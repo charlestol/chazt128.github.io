@@ -308,6 +308,18 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
         font-size: 2em;
     }
     
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
     p, li:not(.contact-link) {
         font-size: 1em;
     }
