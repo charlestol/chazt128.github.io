@@ -167,9 +167,10 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
 	position: absolute;
     top: 0;
     right: 0;
+    padding: 0;
     border: none;
     background: none;
-    font-size: xx-large;
+    font-size: x-large;
     cursor: pointer;
 }
 
@@ -227,7 +228,6 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
 .modal-content h4 {
 	margin: 0;
 	padding: 0.4em;
-	text-align: center;
 	font-size: 1.8em;
 	font-weight: 300;
 	opacity: 0.8;
