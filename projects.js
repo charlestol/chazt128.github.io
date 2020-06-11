@@ -1,6 +1,6 @@
 export default {
   robertHalfCard: {
-    name: 'Robert Half',
+    name: 'Robert Half International',
     cardDesc: 'Revamped and built several of the company\'s multilingual web pages across 19 countries.',
     modalImg: '/assets/RobertHalf.png',
     modalDesc: [
