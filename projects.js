@@ -6,7 +6,8 @@ export default {
     modalDesc: [
       'Role: Front End Developer',
       'Revamped and built several multilingual web pages across 19 countries utilizing Drupal 8 in Agile two-week sprints.',
-      'Built responsive and reusable components with emphasis on ADA compliance.',
+      'Built responsive and reusable components with HTML, CSS, Bootstrap, Javascript and jQuery, emphasizing on ADA compliance.',
+      'Implemented A/B tests with VWO to help drive new designs and components in collaboration with the Marketing and UX team.',
       'Utilized Tealium and Google Tag Manager APIs to implement site-wide tracking in conjunction with the Analytics team.',
       'Instantiated Git into the team\'s workflow and contributed to codebase management via code reviews in Bitbucket.'    
     ],
