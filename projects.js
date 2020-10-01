@@ -3,15 +3,14 @@ export default {
     name: 'Robert Half International',
     cardDesc: 'Revamped and built several of the company\'s multilingual web pages across 19 countries.',
     modalImg: '/assets/RobertHalf.png',
-    modalDesc: [
-      'Role: Front End Developer',
-      'Revamped and built several multilingual web pages across 19 countries utilizing Drupal 8 in Agile two-week sprints.',
-      'Built responsive and reusable components with HTML, CSS, Bootstrap, Javascript and jQuery, emphasizing on ADA compliance.',
-      'Implemented A/B tests with VWO to help drive new designs and components in collaboration with the Marketing and UX team.',
-      'Utilized Tealium and Google Tag Manager APIs to implement site-wide tracking in conjunction with the Analytics team.',
-      'Instantiated Git into the team\'s workflow and contributed to codebase management via code reviews in Bitbucket.'    
+    modalDesc: [      
+      'Role: Software Developer',
+      'Built and launched Robert Half web pages that face millions of users monthly across 18 countries.',
+      'Developed responsive and reusable components with Bootstrap and jQuery, emphasizing on accessibility.',
+      'Increased several page performances by an average of 30% by refactoring code redundancies.',
+      'Improved development processes by building internal tools with Javascript and adding Git into team workflow.'
     ],
-    tech: 'Bootstrap, jQuery, Drupal',
+    tech: 'Bootstrap, jQuery, Bitbucket, Git',
     type: 'professional'
   },
   seekItCard: {
@@ -19,10 +18,10 @@ export default {
     cardDesc: 'Spearheaded a team of 4 to build a platform that allows instructors to take education beyond the classroom.',
     modalImg: '/assets/SeekIt.png',
     modalDesc: [
-      'Spearheaded a team of 4 to build a platform to allow instructors to engage students in assignments outside of the classroom. MVP was completed within 2.5 months.',
-      'Built the app on both mobile and web. We did this considering user type preferences. Instructors may prefer to assign and grade assignments on a web browser whereas students will most likely be using a phone for outdoor tasks.',
-      'This project was sponsored by Chan Zuckerberg Initiative in the Software Engineering course (CSE 120) at UC Merced. I met with Software Engineers from their company weekly for delivering updates and to receive mentoring on challenging topics.',
-      'Awarded 1st place for the Chan Zuckerberg Initiative industry category at UC Merced’s annual Mobile App Challenge.'
+      'Outdoor Education Platform project sponsored by Chan Zuckerberg Initiative',
+      'Spearheaded a team of 4 to develop a platform utilizing React for web and React Native for mobile.',
+      'Integrated Firebase for Authentication, Cloud Firestore (NoSQL) for a database, and Storage for image files.',
+      'Awarded 1st place in the CZI category with an MVP built in 2.5 months at UC Merced\'s Mobile App Challenge.'
     ],
     tech: 'React, React Native, Firebase, Bootstrap',
     type: 'personal'
@@ -69,10 +68,10 @@ export default {
     modalImg: '/assets/HackMerced.png',
     modalDesc: [
       'Role: Director of Engineering',
-      'Worked with and managed 12 Software Engineers to built software for the 4th iteration of the largest hackathon in the san joaquin valley. HackMerced had over 500 applicants and over 350 attendees. For the first time, our event won Program of the Year at UC Merced.',
-      'Built the Pre-Registration, Main, and Live site for HackMerced 4.0.',
-      'Built a RESTful server that stored emails from the Pre-Registration site.',
-      'Built a simple budgeting mobile app that allows users to list items with a purchase value for a React Native workshop that I instructed.'
+      'Built sites with React that handled over 500 applications and a live site that faced over 300 participants.',
+      'Built a RESTful back-end with Node.js/Express/MongoDB that stored hackathon applications.',
+      'Collaborated with HackMerced directors in planning the largest annual hackathon in the San Joaquin Valley.',
+      'Managed a team of 12 Software Engineers and 2 Project Managers to build software for the organization.'
     ],
     tech: 'React, React Native, Node, Express, MongoDB',
     type: 'professional'
@@ -83,9 +82,9 @@ export default {
     modalImg: '/assets/MyoHMI.png',
     modalDesc: [
       'Role: Computer Engineer Intern',
-      'Built a Myo-Armband Android app for low-cost gesture recognition research with a team of 6 that connects to a Myo-Armband to allow the user to train the app to recognize gestures when armband is worn.',
-      'The user can select one of the default gestures (point, open-hand, fist) or create their own gesture by adding to the gesture list. Before training, the user can also select different features and classification algorithms to be active when processing the training data. When training gestures, the Myo-Armband acquires the electrical activity in the skeletal muscles as electromyographic data.',
-      'Collaborated in writing an abstract based on research conducted with our app that was later published and our team was awarded Best Diversity Paper Award at the American Society for Engineering Education Zone IV Conference.'
+      'Utilized Android Studio with Java to develop an Android app for low-cost hand gesture recognition research.',
+      'Contributed to building the interface, interfacing functions, bug fixes, and conducting research with the app.',
+      'Awarded Best Diversity Research Paper as a coauthor of a research abstract at the ASEE-ZONE IV 2018.'
     ],
     tech: 'Android Studio, Myo-Armband',
     type: 'professional'
