@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Description" content="Personal website and portfolio">
+    <meta name="keywords" content="Charles,Tolentino,Portfolio,About,Software,Engineer">
+    <meta name="author" content="Charles Tolentino">
+    <meta content="View Charles Tolentino's personal site and portfolio">
+    <title>Charles Tolentino</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145325703-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-145325703-1');
+    </script>
+    <script type="text/javascript"> (function() { let fa = document.createElement('link'); fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'; fa.rel = 'stylesheet'; document.getElementsByTagName('head')[0].appendChild(fa); })(); </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Varela Round:400"]
+        }
+      });
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="fade-in">
+      <nav>
+        <ul>
+          <li id="aboutTab" class="tab active"><a href="/">About</a></li>
+          <li id="portfolioTab" class="tab"><a href="/portfolio">Portfolio</a></li>
+          <li id="resumeTab" class="tab"><a href="https://docs.google.com/document/d/1qp8FE_-qnoL3q0hP4WttNWOJlrFm8iAnagtf9duFZxc/edit" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div id="portfolio" class="hide">
+          <h1>Portfolio</h1>
+          <div class="modal slide-effect">
+            <div class="modal-content">
+              <h4 id="modalHeader">Modal Dialog</h4>
+              <button type="button" id="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div>
+                <div>
+                  <img id="modalImage" src="" alt="" />
+                </div>
+                <div>
+                  <ul id="modalDescription"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="overlay"></div>
+          <div id="cardDeck">
+            <div id="professional">
+              <h2>Professional</h2>
+            </div>
+            <div id="personal">
+              <h2>Personal</h2>
+            </div>
+          </div>          
+        </div>
+      </div>
+      <footer>
+        <ul>
+          <li class="contact-link"><a href="https://github.com/chazt128" aria-label="Github" target="_blank" rel="noopener noreferrer"><span class="icon fa fa-github fa-2x"></span></a></li>
+          <li class="contact-link"><a href="https://www.linkedin.com/in/charlestol/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"><span class="icon fa fa-linkedin fa-2x"></span></a></li>
+          <li class="contact-link"><a href="https://www.facebook.com/ChazTol" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><span class="icon fa fa-facebook-square fa-2x"></span></a></li>
+          <li class="contact-link"><a href="mailto:ctolen1994@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer"><span class="icon fa fa-envelope fa-2x"></span></a></li>
+        </ul>
+        <div id="copyright">© Charles Tolentino</div>
+      </footer>
+    </div>
+    <script src="../tabs.js"></script>
+    <script src="../cards.js" type="module"></script>
+  </body>
+</html>
