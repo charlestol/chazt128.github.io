@@ -1,6 +1,6 @@
 // import projects
-import projects from './projects.js';
-
+import projects from './projects.js'
+console.log("test")
 // Get DOM Elements
 const professional = document.getElementById('professional');
 const personal = document.getElementById('personal');
