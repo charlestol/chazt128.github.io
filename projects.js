@@ -4,7 +4,7 @@ export default {
     cardDesc: 'Revamped and built several of the company\'s multilingual web pages across 19 countries.',
     modalImg: '/assets/RobertHalf.png',
     modalDesc: [      
-      'Role: Software Developer',
+      'Role: Front End Developer',
       'Built and launched Robert Half web pages that face millions of users monthly across 18 countries.',
       'Developed responsive and reusable components with Bootstrap and jQuery, emphasizing on accessibility.',
       'Increased several page performances by an average of 30% by refactoring code redundancies.',
