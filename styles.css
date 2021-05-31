@@ -38,6 +38,10 @@ nav {
     padding-top: 40px;
 }
 
+.content {
+    margin-bottom: 50px;
+}
+
 footer {
     padding-bottom: 40px;
 }
@@ -79,7 +83,7 @@ nav > ul > li, footer > ul > li {
 }
 
 nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .tab:not(:last-child):hover {
@@ -306,6 +310,7 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
 
     h1 {
         font-size: 2em;
+        margin-top: 1.5em;
     }
     
     h2 {
@@ -322,6 +327,10 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
 
     p, li:not(.contact-link) {
         font-size: 1em;
+    }
+
+    .content {
+        margin-bottom: 30px;
     }
 
     #copyright {
