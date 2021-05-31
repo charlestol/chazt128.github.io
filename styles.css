@@ -168,13 +168,13 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
 }
 
 #close {
-	position: absolute;
+    position: absolute;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 0 10px;
     border: none;
     background: none;
-    font-size: x-large;
+    font-size: xx-large;
     cursor: pointer;
 }
 
