@@ -1,17 +1,42 @@
 export default {
+  miResourceCard: {
+    name: 'MiResource',
+    cardDesc: 'Collaborated with teammates to build a new iteration of the personalized mental health resource platform.',
+    modalImg: '/assets/MiResource.png',
+    modalDesc: [      
+      'Role: Software Engineer',
+      'Collaborated with teammates to build a new iteration of the personalized mental health resource platform.',
+      'Built interfaces and components from scratch utilizing React, Redux, SCSS, and integrating the backend API.',
+      'Contributed to creating email templates, code refactoring, code reviews, bug fixes, QA, and interface design.',
+    ],
+    tech: 'React, Redux, SCSS',
+    type: 'professional'
+  },
   robertHalfCard: {
     name: 'Robert Half International',
     cardDesc: 'Revamped and built several of the company\'s multilingual web pages across 19 countries.',
     modalImg: '/assets/RobertHalf.png',
     modalDesc: [      
       'Role: Front End Developer',
-      'Built and launched Robert Half web pages that face millions of users monthly across 18 countries.',
-      'Developed responsive and reusable components with Bootstrap and jQuery, emphasizing on accessibility.',
+      'Increased Job Orders by 600% by revamping Robert Half landing pages that face millions of monthly users.',
       'Increased several page performances by an average of 30% by refactoring code redundancies.',
-      'Improved development processes by building internal tools with Javascript and adding Git into team workflow.'
+      'Built responsive layouts with Javascript and Bootstrap, emphasizing on accessibility-first development.',
+      'Conducted technical interviews for candidates applying for Frontend Developer and QA Web Analyst roles.',
+      'Worked with technical and non-technical teams to implement new features, components, and designs.',
+      'Built internal tools that improved work quality by reducing development errors and Drupal load time for various teams.'
     ],
-    tech: 'Bootstrap, jQuery, Bitbucket, Git',
+    tech: 'Bootstrap, jQuery, Drupal',
     type: 'professional'
+  },
+  textToCodeCard: {
+    name: 'Text to Code',
+    cardDesc: 'A useful tool for constructing an array from text, especially from an excel sheet or document.',
+    modalImg: '/assets/TextToCode.png',
+    modalDesc: [
+      'A useful tool for constructing an array from text, especially from an excel sheet or document.'
+    ],
+    tech: 'HTML, CSS, Javascript',
+    type: 'personal'
   },
   seekItCard: {
     name: 'SeekIt',
@@ -74,7 +99,7 @@ export default {
       'Managed a team of 12 Software Engineers and 2 Project Managers to build software for the organization.'
     ],
     tech: 'React, React Native, Node, Express, MongoDB',
-    type: 'professional'
+    type: 'personal'
   },
   myoCard: {
     name: 'Myo HMI (Human-Machine Interface)',

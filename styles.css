@@ -39,7 +39,7 @@ nav {
 }
 
 .content {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 footer {
@@ -330,7 +330,7 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
     }
 
     .content {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     #copyright {
