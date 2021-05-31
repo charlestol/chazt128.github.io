@@ -33,7 +33,18 @@ export default {
     cardDesc: 'A useful tool for constructing an array from text, especially from an excel sheet or document.',
     modalImg: '/assets/TextToCode.png',
     modalDesc: [
-      'A useful tool for constructing an array from text, especially from an excel sheet or document.'
+      'A useful tool for constructing an array from text, especially from an excel sheet or document.',
+      'Made with HTML, CSS, Javascript, served with Node.js, and deployed on Heroku.'
+    ],
+    links: [
+      {
+        label: "Website",
+        link: "http://www.text-to-code.com/",
+      },
+      {
+        label: "Github",
+        link: "https://github.com/chazt128/text-to-code",
+      }
     ],
     tech: 'HTML, CSS, Javascript',
     type: 'personal'
@@ -48,6 +59,16 @@ export default {
       'Integrated Firebase for Authentication, Cloud Firestore (NoSQL) for a database, and Storage for image files.',
       'Awarded 1st place in the CZI category with an MVP built in 2.5 months at UC Merced\'s Mobile App Challenge.'
     ],
+    links: [
+      {
+        label: "Github (Web)",
+        link: "https://github.com/chazt128/ScavengerHunt"
+      },
+      {
+        label: "Github (Mobile)",
+        link: "https://github.com/chazt128/ScavengerHunt-Mobile"
+      }
+    ],
     tech: 'React, React Native, Firebase, Bootstrap',
     type: 'personal'
   },
@@ -59,6 +80,12 @@ export default {
       'This app allows a user to write, edit, delete, view, and filter journal entries.',
       'The filtering feature persistently filters the journal entry list to only contain posts that contain the typed text as the user types in the textbox.',
       'This was a great and simple project to learn how to built a RESTful API, using Redux and Redux Saga, and solidifying my utilization of the MERN stack (MongoDB, Express, React, Node).'
+    ],
+    links: [
+      {
+        label: "Github",
+        link: "https://github.com/chazt128/Journaling"
+      }
     ],
     tech: 'React, Redux, Redux Saga, Bootstrap, Node, Express, MongoDB',
     type: 'personal'
@@ -73,6 +100,12 @@ export default {
       'This app was developed to be used for a user case study, recording the effectiveness of audio (speech) and tactile (vibrations) in different environments, for the Human-Computer Interaction course (CSE 155) at UC Merced.',
       'If you\'ve ever heard of the show "Silicon Valley", our app was inspired by their "Not Hotdog" app which tells the user whether or not they are looking at a hotdog.'
     ],
+    links: [
+      {
+        label: "Github",
+        link: "https://github.com/chazt128/Lil-Bill"
+      }
+    ],
     tech: 'React Native, TuriCreate',
     type: 'personal'
   },
@@ -83,6 +116,16 @@ export default {
     modalDesc: [
       'A twitter bot that tweets a Captain Falcon move every 6 hours. It simply tweets "Falcon [randomWord]" (example: Falcon punch).',
       'Utilized the Twitter API and a random word generator to generate random English words.'
+    ],
+    links: [
+      {
+        label: "Twitter",
+        link: "https://twitter.com/realcaptfalcon"
+      },
+      {
+        label: "Github",
+        link: "https://github.com/chazt128/FalconTweets"
+      }
     ],
     tech: 'Node, Twitter API, Heroku',
     type: 'personal'

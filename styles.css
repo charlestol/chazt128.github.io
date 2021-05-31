@@ -64,7 +64,7 @@ a:focus {
     outline: none;
 }
 
-.active, .tab:hover, .tab:focus, .tab > a:focus,.contact-link > a:hover, .contact-link > a:focus {
+.active, .tab:hover, .tab:focus, .tab > a:focus,.contact-link > a:hover, .contact-link > a:focus, .project-link > a:hover, .project-link > a:focus {
     border-bottom: 2px solid #000;
     padding-bottom: 1.5px;
 }
@@ -260,10 +260,19 @@ nav > ul > li:not(:last-child), footer > ul > li:not(:last-child) {
     font-size: larger;
 }
 
-#modalDescription > li:not(:last-child) {
+#modalDescription > li {
     padding-bottom: 1em;
 }
 
+.project-link {
+    margin-top: 0.5em;
+}
+
+.project-link > a {
+    color: black;
+    text-decoration: none;
+}
+ 
 .modal.slide-effect {
 	-webkit-perspective: 1300px;
 	-moz-perspective: 1300px;
