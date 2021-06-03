@@ -28,25 +28,25 @@ export default {
     tech: 'Bootstrap, jQuery, Drupal',
     type: 'professional'
   },
-  textToCodeCard: {
-    name: 'Text to Code',
+  arrayMakerCard: {
+    name: 'Array Maker',
     cardDesc: 'A useful tool for constructing an array from text, especially from an excel sheet or document.',
     modalImg: '/assets/TextToCode.png',
     modalDesc: [
       'A useful tool for constructing an array from text, especially from an excel sheet or document.',
-      'Made with HTML, CSS, Javascript, served with Node.js, and deployed on Heroku.'
+      'Made with HTML, CSS, Javascript, deployed on Firebase Hosting.'
     ],
     links: [
       {
         label: "Website",
-        link: "http://www.text-to-code.com/",
+        link: "https://arraymaker.com/",
       },
       {
         label: "Github",
         link: "https://github.com/chazt128/text-to-code",
       }
     ],
-    tech: 'HTML, CSS, Javascript',
+    tech: 'HTML, CSS, Javascript, Firebase',
     type: 'personal'
   },
   seekItCard: {
