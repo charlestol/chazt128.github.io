@@ -1,5 +1,5 @@
 // import projects
-import projects from './projects.js';
+import projects from './projects.min.js';
 
 // Get DOM Elements
 const professional = document.getElementById('professional');
