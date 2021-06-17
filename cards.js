@@ -11,7 +11,7 @@ const modalCloseButton = document.getElementById('close');
 const modalHeader = document.getElementById('modalHeader');
 const modalImage = document.getElementById('modalImage');
 const modalContent = document.getElementById('modalContent');
-const modalDescription = document.getElementById('modalDescription');
+let modalDescription = document.getElementById('modalDescription');
 
 // Create new Card
 const cardTemplate = (id, {name, cardDesc, tech}) => {
@@ -41,6 +41,7 @@ for(let project in projects) {
 const setModalContent = ({name, modalImg, modalDesc, links}) => {
   modalHeader.textContent = name;
   modalImage.src = modalImg;
+
   for(let desc of modalDesc) {
     let newDecs = document.createElement('li');
     newDecs.textContent = desc;
@@ -56,10 +57,10 @@ const setModalContent = ({name, modalImg, modalDesc, links}) => {
   }
 }
 
-function openModal({target}) {
+function openModal() {
   if(!modal.classList.contains('show')) {
     modal.classList.add('show');
-    setModalContent(projects[target.id || this.id]);
+    setModalContent(projects[this.id]);
   }
 }
 
@@ -68,10 +69,16 @@ function closeModal() {
     modal.classList.remove('show');
     modalHeader.textContent = '';
     modalImage.src = '';
-    modalDescription.innerHTML = '';
+
+    modalDescription = document.getElementById('modalDescription');
+    while (modalDescription.firstChild) {
+      modalDescription.removeChild(modalDescription.firstChild);
+    }
 
     const projectLinks = document.getElementsByClassName("project-link");
-    while (projectLinks.length > 0) projectLinks[0].remove();
+    while (projectLinks.length > 0) {
+      projectLinks[0].remove();
+    }
   }
 }
 
