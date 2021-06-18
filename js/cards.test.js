@@ -9,6 +9,33 @@ const {
     projects
 } = require('./cards');
 
+test('All project cards displayed', () => {
+    document.body.innerHTML = portfolioBody;
+    generateProjectCards();
+
+    const projectsLen = Object.keys(projects).length;
+    const projectCardsLen = document.querySelectorAll('.card').length;
+
+    expect(projectCardsLen).toEqual(projectsLen);
+});
+
+test('Adding content to modal', () => {
+  document.body.innerHTML = portfolioBody;
+
+  const projectData = projects['arrayMakerCard'];
+
+  const projectHeader = projectData.name;
+
+  setModalContent(projectData);
+
+  const modalHeader = document.getElementById('modalHeader').textContent;
+  // const modalImage = document.getElementById('modalImage');
+  // const modalContent = document.getElementById('modalContent');
+  // const modalDescription = document.getElementById('modalDescription');
+
+  expect(modalHeader).toEqual(projectHeader);
+});
+
 const portfolioBody = `<div id="portfolio">
 <h1>Portfolio</h1>
 <div class="modal slide-effect">
@@ -37,12 +64,3 @@ const portfolioBody = `<div id="portfolio">
   </div>
 </div>          
 </div>`;
-
-test('All project cards displayed', () => {
-    document.body.innerHTML = portfolioBody;
-    generateProjectCards();
-
-    const projectsLen = Object.keys(projects).length;
-    const projectCardsLen = document.querySelectorAll('.card').length;
-    expect(projectCardsLen).toEqual(projectsLen);
-});

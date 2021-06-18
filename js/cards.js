@@ -1,18 +1,6 @@
 // import projects
 import projects from './projects.min.js';
 
-// Get DOM Elements
-const professional = document.getElementById('professional');
-const personal = document.getElementById('personal');
-const cards = document.getElementsByClassName('card');
-const modal = document.getElementsByClassName('modal')[0];
-const modalOverlay = document.getElementById('overlay');
-const modalCloseButton = document.getElementById('close');
-const modalHeader = document.getElementById('modalHeader');
-const modalImage = document.getElementById('modalImage');
-const modalContent = document.getElementById('modalContent');
-let modalDescription = document.getElementById('modalDescription');
-
 // Create new Card
 const cardTemplate = (id, {name, cardDesc, tech}) => {
   return `
@@ -30,6 +18,11 @@ const cardTemplate = (id, {name, cardDesc, tech}) => {
 const linkTemplate = (label, link) => `<div class="project-link">Link: <a href=${link} target="_blank">${label}</a><div>`;
 
 const setModalContent = ({name, modalImg, modalDesc, links}) => {
+  const modalHeader = document.getElementById('modalHeader');
+  const modalImage = document.getElementById('modalImage');
+  const modalContent = document.getElementById('modalContent');
+  const modalDescription = document.getElementById('modalDescription');
+
   modalHeader.textContent = name;
   modalImage.src = modalImg;
 
@@ -49,6 +42,8 @@ const setModalContent = ({name, modalImg, modalDesc, links}) => {
 }
 
 function openModal() {
+  const modal = document.getElementsByClassName('modal')[0];
+
   if(!modal.classList.contains('show')) {
     modal.classList.add('show');
     setModalContent(projects[this.id]);
@@ -56,12 +51,16 @@ function openModal() {
 }
 
 function closeModal() {
+  const modal = document.getElementsByClassName('modal')[0];
+  const modalHeader = document.getElementById('modalHeader');
+  const modalImage = document.getElementById('modalImage');
+  const modalContent = document.getElementById('modalContent');
+  const modalDescription = document.getElementById('modalDescription');
+
   if(modal.classList.contains('show')) {
     modal.classList.remove('show');
     modalHeader.textContent = '';
     modalImage.src = '';
-
-    modalDescription = document.getElementById('modalDescription');
 
     while (modalDescription.firstChild) {
       modalDescription.removeChild(modalDescription.firstChild);
@@ -74,21 +73,11 @@ function closeModal() {
   }
 }
 
-// Generate Project Cards
-function generateProjectCards() {
-  const professional = document.getElementById('professional');
-const personal = document.getElementById('personal');
-  for(let project in projects) {
-    let currCard = cardTemplate(project, projects[project]);
-    if(projects[project].type === 'professional') {
-      professional.innerHTML += currCard;
-    } else {
-      personal.innerHTML += currCard;
-    }
-  }
-}
-
 function addListeners() {
+  const cards = document.getElementsByClassName('card');
+  const modalOverlay = document.getElementById('overlay');
+  const modalCloseButton = document.getElementById('close');
+
   for(let card of cards) {
     card.addEventListener('click', openModal);
     card.addEventListener('keyup', event => event.key === 'Enter' && openModal(event));
@@ -98,9 +87,24 @@ function addListeners() {
   modalCloseButton.addEventListener('click', closeModal);
 }
 
-// generateProjectCards();
-// addListeners();
+// Generate Project Cards
+export default function generateProjectCards() {
+  const professional = document.getElementById('professional');
+  const personal = document.getElementById('personal');
 
+  for(let project in projects) {
+    let currCard = cardTemplate(project, projects[project]);
+    if(projects[project].type === 'professional') {
+      professional.innerHTML += currCard;
+    } else {
+      personal.innerHTML += currCard;
+    }
+  }
+
+  addListeners();
+}
+
+// For testing, not included in minified file
 module.exports = {
   cardTemplate,
   linkTemplate,
