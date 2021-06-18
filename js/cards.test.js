@@ -23,17 +23,41 @@ test('Adding content to modal', () => {
   document.body.innerHTML = portfolioBody;
 
   const projectData = projects['arrayMakerCard'];
-
   const projectHeader = projectData.name;
+  const projectImage = projectData.modalImg;
+  const projectDescriptionLen = projectData.modalDesc.length;
+  const projectLinksLen = projectData.links.length;
 
   setModalContent(projectData);
 
   const modalHeader = document.getElementById('modalHeader').textContent;
-  // const modalImage = document.getElementById('modalImage');
-  // const modalContent = document.getElementById('modalContent');
-  // const modalDescription = document.getElementById('modalDescription');
+  const modalImage = document.getElementById('modalImage').src;
+  const modalDescriptionLen = document.querySelectorAll('#modalDescription li').length;
+  const modalLinksLen = document.querySelectorAll('.project-link').length;
 
   expect(modalHeader).toEqual(projectHeader);
+  expect(modalImage).toEqual(
+    expect.stringContaining(projectImage),
+  );
+  expect(modalDescriptionLen).toEqual(projectDescriptionLen);
+  expect(modalLinksLen).toEqual(projectLinksLen);
+});
+
+test('Modal content set on card click', () => {
+  document.body.innerHTML = portfolioBody;
+  generateProjectCards();
+
+  let projectData = projects['seekItCard'];
+  let projectHeader = projectData.name;
+  let firstProjectDescription = projectData.modalDesc[0];
+
+  document.getElementById('seekItCard').click();
+
+  const modalHeader = document.getElementById('modalHeader').textContent;
+  const firstModalDescription = document.querySelector('#modalDescription li').textContent;
+
+  expect(modalHeader).toEqual(projectHeader);
+  expect(firstModalDescription).toEqual(firstProjectDescription);
 });
 
 const portfolioBody = `<div id="portfolio">

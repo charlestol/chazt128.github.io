@@ -54,7 +54,6 @@ function closeModal() {
   const modal = document.getElementsByClassName('modal')[0];
   const modalHeader = document.getElementById('modalHeader');
   const modalImage = document.getElementById('modalImage');
-  const modalContent = document.getElementById('modalContent');
   const modalDescription = document.getElementById('modalDescription');
 
   if(modal.classList.contains('show')) {
