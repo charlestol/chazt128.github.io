@@ -1,3 +1,3 @@
-import generateProjectCards from './cards.js';
+import generateProjectCards from './cards.min.js';
 
 generateProjectCards();

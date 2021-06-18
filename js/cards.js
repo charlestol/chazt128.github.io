@@ -104,13 +104,13 @@ export default function generateProjectCards() {
 }
 
 // For testing, not included in minified file
-module.exports = {
-  cardTemplate,
-  linkTemplate,
-  setModalContent,
-  openModal,
-  closeModal,
-  generateProjectCards,
-  addListeners,
-  projects,
-};
+// module.exports = {
+//   cardTemplate,
+//   linkTemplate,
+//   setModalContent,
+//   openModal,
+//   closeModal,
+//   generateProjectCards,
+//   addListeners,
+//   projects,
+// };
