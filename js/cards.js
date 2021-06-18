@@ -29,15 +29,6 @@ const cardTemplate = (id, {name, cardDesc, tech}) => {
 
 const linkTemplate = (label, link) => `<div class="project-link">Link: <a href=${link} target="_blank">${label}</a><div>`;
 
-// Generate Project Cards
-for(let project in projects) {
-  let currCard = cardTemplate(project, projects[project]);
-  if(projects[project].type === 'professional')
-    professional.innerHTML += currCard;
-  else
-    personal.innerHTML += currCard;
-}
-
 const setModalContent = ({name, modalImg, modalDesc, links}) => {
   modalHeader.textContent = name;
   modalImage.src = modalImg;
@@ -71,6 +62,7 @@ function closeModal() {
     modalImage.src = '';
 
     modalDescription = document.getElementById('modalDescription');
+
     while (modalDescription.firstChild) {
       modalDescription.removeChild(modalDescription.firstChild);
     }
@@ -82,12 +74,40 @@ function closeModal() {
   }
 }
 
-for(let card of cards) {
-  let currModal = modal.cloneNode(true);
-  currModal.innerHTML += 'YES'
-  card.addEventListener('click', openModal);
-  card.addEventListener('keyup', event => event.key === 'Enter' && openModal(event));
+// Generate Project Cards
+function generateProjectCards() {
+  const professional = document.getElementById('professional');
+const personal = document.getElementById('personal');
+  for(let project in projects) {
+    let currCard = cardTemplate(project, projects[project]);
+    if(projects[project].type === 'professional') {
+      professional.innerHTML += currCard;
+    } else {
+      personal.innerHTML += currCard;
+    }
+  }
 }
 
-modalOverlay.addEventListener('click', closeModal);
-modalCloseButton.addEventListener('click', closeModal);
+function addListeners() {
+  for(let card of cards) {
+    card.addEventListener('click', openModal);
+    card.addEventListener('keyup', event => event.key === 'Enter' && openModal(event));
+  }
+    
+  modalOverlay.addEventListener('click', closeModal);
+  modalCloseButton.addEventListener('click', closeModal);
+}
+
+// generateProjectCards();
+// addListeners();
+
+module.exports = {
+  cardTemplate,
+  linkTemplate,
+  setModalContent,
+  openModal,
+  closeModal,
+  generateProjectCards,
+  addListeners,
+  projects,
+};
